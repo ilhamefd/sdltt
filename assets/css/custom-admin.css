@@ -1,0 +1,35 @@
+.menu {
+    color: #f1f1f1;
+}
+
+.menu:hover {
+    color: #000;
+}
+
+.navbar-default {
+    background-color: #2C8096;
+    border-color: #bef3ff;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.white{
+    color: #dbe2e8;
+    text-decoration: none;
+}
+
+.navbar-right{
+	padding-right: 20px;
+}
+
+#wrapper {
+    width: 100%;
+    background-color: #277387;
+}
+
+.sidebar ul li a.active {
+    background-color: #eeeeee;
+    color: #2C8096;
+}

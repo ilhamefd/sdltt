@@ -1,0 +1,120 @@
+    /* Add a gray background color and some padding to the footer */
+    .logo{
+      padding-left: 100px;
+    }
+    footer {
+      background-color: #2C8096;
+      padding: 10px;
+    }
+	   
+    .badge-red {
+      display: inline-block;
+      min-width: 10px;
+      padding: 3px 7px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      background-color: red;
+      border-radius: 10px;
+    }
+
+    .badge-green {
+      display: inline-block;
+      min-width: 10px;
+      padding: 3px 7px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      background-color: green;
+      border-radius: 10px;
+    }
+
+    .badge-yellow {
+      display: inline-block;
+      min-width: 10px;
+      padding: 3px 7px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      background-color: #d4b50d;
+      border-radius: 10px;
+    }
+
+    nav.navbar.navbar-fixed-top {
+      background-color: #2C8096;
+    }
+    .nav>li>a:hover {
+    background-color: #D4E5EA;
+    }
+     
+    .navbar {
+      position: relative;
+      min-height: 50px;
+      margin-bottom: 20px;
+      border: 10px solid rgba(13, 27, 140, 0.52);
+    }
+    
+   .container-fluid {
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    /* actual dropdown animation */
+    .dropdown .dropdown-menu {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+
+        max-height: 0;
+        display: block;
+        overflow: hidden;
+        opacity: 0;
+        background-color: #2C8096 ;
+    }
+
+    .dropdown.open .dropdown-menu {
+        max-height: 200px;
+        opacity: 1;
+    }
+    
+    .fcm {
+      color: #f1f1f1;
+    }
+
+    .fcm:hover {
+      color: #2C8096;
+    }
+
+    .white{
+      color: #f1f1f1;
+    }
+
+	  .konten{
+		  padding-top:140px;
+	  }
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
