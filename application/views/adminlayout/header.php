@@ -115,7 +115,7 @@
                         </li>
 
                         <li>
-                            <a class="white" href="#"><i class="fa fa-users fa-fw fcm"></i> Tambah Pengguna</a>
+                            <a class="white" href="<?php echo site_url('pengguna') ?>"><i class="fa fa-users fa-fw fcm"></i> Tambah Pengguna</a>
                         </li>
                        <!--  -->
                     </ul>
