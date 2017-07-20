@@ -2,16 +2,17 @@
 
 Class M_login extends CI_Model {
        public function cek($u, $p) {
-
+       	$pass=md5($p);
 		$this->db->where('username', $u);
-		$this->db->where('password', $p);
+		$this->db->where('password', $pass);
 		$query = $this->db->get('user');
 
 		if ($query->num_rows()>0) 
 		{
 			foreach ($query->result() as $row) 
 			{
-				$sess = array('username' => $row->username,
+				$sess = array('id' => $row->id,
+							'username' => $row->username,
 							'password' => $row->password,
 							'level' => $row->level
 							);

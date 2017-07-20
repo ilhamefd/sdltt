@@ -23,6 +23,8 @@
     <!-- Morris Charts CSS -->
     <link href="<?php echo base_url(); ?>assets/vendor/morrisjs/morris.css" rel="stylesheet">
 
+    <link href="<?php echo base_url(); ?>assets/sweet-alert/css/sweetalert2.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/custom-admin.css">
 
     <!-- Custom Fonts -->
@@ -36,6 +38,8 @@
     <![endif]-->
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
+    
+    <script src="<?php echo base_url(); ?>assets/sweet-alert/js/sweetalert2.minjs"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -45,6 +49,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/sids.js"></script>
 
 </head>
 

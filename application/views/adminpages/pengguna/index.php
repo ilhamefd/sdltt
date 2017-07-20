@@ -14,6 +14,7 @@
                                 <tr>
                                     <th width="50px">No</th>
                                     <th>Username</th>
+                                    <th>Jabatan</th>
                                     <th>Level</th>
                                     <th width="150px">Aksi</th>
                                 </tr>
@@ -23,9 +24,10 @@
                                 <tr class="odd gradeX">
                                         <td align="center"><?php echo $value->id ?></td>
                                         <td><?php echo $value->username ?></td>
+                                        <td><?php echo $value->jabatan ?></td>
                                         <td><?php echo $value->level ?></td>
-                                        <td align="center"><a href=""><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
-                                        <a href=""><span class="btn btn-danger btn-xs"> <i class="fa fa-trash" aria-hidden="true"></i> Delete </span></a></td>
+                                        <td align="center"><a href="<?php echo site_url('pengguna/edit/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
+                                        <a href="<?php echo site_url('pengguna/del/'.$value->id.'') ?>" data-confirm="Apakah anda yakin untuk menghapus data ini?"><span class="btn btn-danger btn-xs"> <i class="fa fa-trash" aria-hidden="true"></i> Delete </span></a></td>
                                     </tr>    
                             <?php } ?>
                                 
