@@ -20,16 +20,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($pengguna as $key => $value) { ?>
+                            <?php $i = 1;
+                            foreach ($pengguna as $key => $value) { ?>
                                 <tr class="odd gradeX">
-                                        <td align="center"><?php echo $value->id ?></td>
+                                        <td align="center"><?php echo $i ?></td>
                                         <td><?php echo $value->username ?></td>
                                         <td><?php echo $value->jabatan ?></td>
                                         <td><?php echo $value->level ?></td>
                                         <td align="center"><a href="<?php echo site_url('pengguna/edit/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
+                                        <!-- <span>&nbsp;</span> -->
                                         <a href="<?php echo site_url('pengguna/del/'.$value->id.'') ?>" data-confirm="Apakah anda yakin untuk menghapus data ini?"><span class="btn btn-danger btn-xs"> <i class="fa fa-trash" aria-hidden="true"></i> Delete </span></a></td>
                                     </tr>    
-                            <?php } ?>
+                            <?php $i++;
+                            } ?>
                                 
                             </tbody>
                         </table>
