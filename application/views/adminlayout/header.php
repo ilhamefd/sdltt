@@ -12,14 +12,9 @@
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
                     <a class="dropdown-toggle white" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> Admin <i class="fa fa-caret-down"></i>
+                        <?php echo $this->session->userdata('username'); ?> <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i> 
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a class="white" href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a class="white" href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
                         <li><a href="<?php echo base_url('login/keluar')?>"><i class="fa fa-sign-out fa-fw "></i> Logout</a>
                         </li>
                     </ul>
