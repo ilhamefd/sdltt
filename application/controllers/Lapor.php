@@ -8,5 +8,24 @@ class Lapor extends CI_Controller {
 						);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
+
+	public function laporkan(){
+		$nik	= $this->input->post('nik');
+		$nama	= $this->input->post('nama');
+		$alamat	= $this->input->post('alamat');
+		$lokasi	= $this->input->post('lokasi');
+		// $foto	= $this->input->post('foto');
+
+		$data = array(
+			'nik'	=> $nik,
+			'nama'	=> $nama,
+			'alamat'=> $alamat,
+			'lokasi'=> $lokasi
+			);
+
+		$this->m_global->insert('lapor',$data);
+		redirect('lapor/index');
+	}
+	
 	
 }

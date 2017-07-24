@@ -6,6 +6,7 @@ class Sejarah extends CI_Controller {
 		$data=array('title'=>'Sejarah Desa',
 					'isi'  =>'userpages/sejarah/sejarah'
 						);
+		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'sejarah']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	

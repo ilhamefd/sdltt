@@ -29,11 +29,7 @@
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a class="white" href="#"><i class="fa fa-dashboard fa-fw fcm"></i> Dashboard</a>
-                        </li>
-                        
-                        <li>
-                            <a class="white" href="<?php echo site_url('admin_home')?>"><i class="fa fa-eyedropper fa-fw fcm"></i> Absensi Kehadiran</a>
+                            <a class="white" href="<?php echo site_url('admin_home')?>"><i class="fa fa-dashboard fa-fw fcm"></i> Dashboard</a>
                         </li>
                         
                         <li>
@@ -54,7 +50,10 @@
                                     <a class="white" href="morris.html"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>
                                 </li>
                                 <li>
-                                    <a class="white" href="morris.html"><i class="fa fa-youtube-play fa-fw"></i> Video</a>
+                                    <a class="white" href="<?php echo site_url('admin_video')?>"><i class="fa fa-youtube-play fa-fw"></i> Video</a>
+                                </li>
+                                <li>
+                                    <a class="white" href="<?php echo site_url('admin_streaming')?>"><i class="fa fa-youtube-play fa-fw"></i> Streaming</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -68,13 +67,13 @@
                                     <a class="white" href="#"><i class="fa fa-user fa-fw"></i> Profil Desa <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a class="white" href="#">Jajaran Perangkat Desa</a>
+                                            <a class="white" href="<?php echo site_url('admin_jajaran_perangkat')?>">Jajaran Perangkat Desa</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="#">Sejarah</a>
+                                            <a class="white" href="<?php echo site_url('admin_sejarah')?>">Sejarah</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="#">Visi & Misi</a>
+                                            <a class="white" href="<?php echo site_url('admin_visi_misi')?>">Visi & Misi</a>
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->

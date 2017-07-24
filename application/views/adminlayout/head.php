@@ -50,7 +50,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/sids.js"></script>
-
+    <script type="text/javascript" src="<?php echo base_url();?>assets/ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
