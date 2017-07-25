@@ -105,7 +105,7 @@
                         </li>
 
                         <li>
-                            <a class="white" href="#"><i class="fa fa-pie-chart fa-fw fcm"></i> Perbarui Statistik Penduduk</a>
+                            <a class="white" href="<?php echo site_url('Admin_Statistik') ?>"><i class="fa fa-pie-chart fa-fw fcm"></i> Perbarui Statistik Penduduk</a>
                         </li>
 
                         <li>
