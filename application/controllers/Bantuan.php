@@ -6,6 +6,7 @@ class Bantuan extends CI_Controller {
 		$data=array('title'=>'Bantuan',
 					'isi'  =>'userpages/bantuan/bantuan'
 						);
+		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'bantuan']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	

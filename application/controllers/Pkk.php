@@ -6,6 +6,7 @@ class Pkk extends CI_Controller {
 		$data=array('title'=>'PKK',
 					'isi'  =>'userpages/pkk/pkk'
 						);
+		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'pkk']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	

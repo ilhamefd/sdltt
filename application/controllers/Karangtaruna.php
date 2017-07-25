@@ -6,6 +6,7 @@ class Karangtaruna extends CI_Controller {
 		$data=array('title'=>'Karangtaruna',
 					'isi'  =>'userpages/karangtaruna/karangtaruna'
 						);
+		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'karangtaruna']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	

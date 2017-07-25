@@ -6,6 +6,7 @@ class Lpmd extends CI_Controller {
 		$data=array('title'=>'LPMD',
 					'isi'  =>'userpages/lpmd/lpmd'
 						);
+		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'lpmd']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	

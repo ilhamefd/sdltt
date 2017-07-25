@@ -6,6 +6,7 @@ class Bpd extends CI_Controller {
 		$data=array('title'=>'BPD',
 					'isi'  =>'userpages/bpd/bpd'
 						);
+		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'bpd']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	
