@@ -11,10 +11,10 @@ CKEDITOR.editorConfig = function( config ) {
    config.extraPlugins = 'widget';
    config.extraPlugins = 'filebrowser';
    config.extraPlugins = 'popup';
-   config.filebrowserBrowseUrl = '../assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
-   config.filebrowserImageBrowseUrl = '../assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
-   config.filebrowserFlashBrowseUrl = '../assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
-   config.filebrowserUploadUrl = '../assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
-   config.filebrowserImageUploadUrl = '../assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
-   config.filebrowserFlashUploadUrl = '../assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
+   config.filebrowserBrowseUrl = '../sids/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
+   config.filebrowserImageBrowseUrl = '../sids/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
+   config.filebrowserFlashBrowseUrl = '../sids/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
+   config.filebrowserUploadUrl = '../sids/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
+   config.filebrowserImageUploadUrl = '../sids/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
+   config.filebrowserFlashUploadUrl = '../sids/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
 };
