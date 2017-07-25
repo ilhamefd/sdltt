@@ -9,7 +9,7 @@
 				        Edit Data
 				    </div>
 				    <div class="panel-body">    
-				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>pengguna/act_add">
+				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>pengguna/act_edit/<?php echo $profil[0]->id ?>">
 				        	<div class="col-lg-3">
 							    <label>Username</label>
 						    </div>        	
