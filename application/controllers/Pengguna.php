@@ -89,31 +89,32 @@ class Pengguna extends CI_Controller {
 		echo json_encode($result);
 
 	}
-	public function act_edit()
+	public function act_edit($id)
 	{
 		$result = [];
 		$post 	= $this->input->post();
+		$password_lama = $this->m_global->get_data_all('user',null,['id' => $id], 'password');
+		$password = $post['password'];
 
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
-		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 		$this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
 		$this->form_validation->set_rules('level', 'Level', 'trim|required');
 		
-		if ($this->form_validation->run() == true){
+		if ($this->form_validation->run() == true && $password == ''){
 			$menu_data 	= [
 						'username' 			=> $post['username'],
-						'password'			=> md5($post['password']),
+						'password'			=> $password_lama[0]->password,
 						'jabatan'			=> $post['jabatan'],
 						'level'				=> $post['level']
-						// 'created_by'		=> user_data()->id
 					  ];
 			$x = $this->m_global->get_data_all('user',null,['jabatan' => $menu_data['jabatan']]);
-			if($x) {			
+			if($x) {
+				if($x[0]->id !== $id) {
 					$result['msg'] = 'Jabatan sudah terisi !';
 					$result['sts'] = '0';
 				}
 				else{
-					$role = $this->m_global->insert('user', $menu_data);
+					$role = $this->m_global->update('user', $menu_data, ['id' => $id]);
 
 					if($role) {
 						$result['msg'] = 'Data pengguna berhasil ditambahakan !';
@@ -124,7 +125,61 @@ class Pengguna extends CI_Controller {
 						$result['sts'] = '0';
 					}
 				}
-		} else {
+			}
+			else
+			{
+				$role = $this->m_global->update('user', $menu_data, ['id' => $id]);
+
+				if($role) {
+					$result['msg'] = 'Data pengguna berhasil ditambahakan !';
+					$result['sts'] = '1';
+				} else {
+					$result['msg'] = 'Data pengguna gagal ditambahakan !';
+					$result['sts'] = '0';
+				}
+			}
+		}
+		if ($this->form_validation->run() == true && $password !== ''){
+			$menu_data 	= [
+						'username' 			=> $post['username'],
+						'password' 			=> md5($password),
+						'jabatan'			=> $post['jabatan'],
+						'level'				=> $post['level']
+					  ];
+			$x = $this->m_global->get_data_all('user',null,['jabatan' => $menu_data['jabatan']]);
+			if($x) {
+				if($x[0]->id !== $id) {
+					$result['msg'] = 'Jabatan sudah terisi !';
+					$result['sts'] = '0';
+				}
+				else{
+					$role = $this->m_global->update('user', $menu_data, ['id' => $id]);
+
+					if($role) {
+						$result['msg'] = 'Data pengguna berhasil ditambahakan !';
+						$result['sts'] = '1';
+						redirect('pengguna');
+					} else {
+						$result['msg'] = 'Data pengguna gagal ditambahakan !';
+						$result['sts'] = '0';
+					}
+				}
+			}
+			else
+			{
+				$role = $this->m_global->update('user', $menu_data, ['id' => $id]);
+
+				if($role) {
+					$result['msg'] = 'Data pengguna berhasil ditambahakan !';
+					$result['sts'] = '1';
+					redirect('pengguna');
+				} else {
+					$result['msg'] = 'Data pengguna gagal ditambahakan !';
+					$result['sts'] = '0';
+				}
+			}
+		}
+		else {
 			$result['msg'] = validation_errors();
 			$result['sts'] = '0';
 		}
