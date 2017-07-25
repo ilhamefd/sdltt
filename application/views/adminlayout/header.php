@@ -83,22 +83,22 @@
                                     <a class="white" href="#"><i class="fa fa-sitemap fa-fw"></i> Lembaga <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a class="white" href="#">BPD</a>
+                                            <a class="white" href="<?php echo site_url('admin_bpd')?>">BPD</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="#">LPMD</a>
+                                            <a class="white" href="<?php echo site_url('admin_lpmd')?>">LPMD</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="#">PKK</a>
+                                            <a class="white" href="<?php echo site_url('admin_pkk')?>">PKK</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="#">Karangtaruna</a>
+                                            <a class="white" href="<?php echo site_url('admin_karangtaruna')?>">Karangtaruna</a>
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->
                                 </li>
                                 <li>
-                                    <a class="white" href="#"><i class="fa fa-support fa-fw"></i> Bantuan</a>
+                                    <a class="white" href="<?php echo site_url('admin_bantuan')?>"><i class="fa fa-support fa-fw"></i> Bantuan</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
