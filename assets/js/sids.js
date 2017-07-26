@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-    function sweet (){
-    swal("Good job!", "You clicked the button!", "success");
-    }
-
     /**
      * Modal confirmation untuk link.
      */
@@ -23,14 +19,13 @@ $(document).ready(function () {
 
                             '<div class="modal-footer">' +
                                 '<button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>' +
-                                '<a class="btn btn-primary" id="dataConfirmOK" onclick="sweet()">Ya</a>' +
+                                '<a class="btn btn-primary" id="dataConfirmOK">Ya</a>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
                 '</div>'
             );
         }
-
         $('#dataConfirmModal').find('.modal-body').text($(this).attr('data-confirm'));
         $('#dataConfirmOK').attr('href', href);
         $('#dataConfirmModal').modal({show: true});
@@ -67,7 +62,6 @@ $(document).ready(function () {
 
         // Jika tombol submit di-klik.
         $("#dataConfirmOK").click(function () {
-            swal("Good job!", "You clicked the button!", "success");
             $("#myform").submit();
         });
         return false;
