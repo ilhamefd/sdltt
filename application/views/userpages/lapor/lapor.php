@@ -6,8 +6,17 @@
     <hr>
     <br>
     	<br>
-	    <form class="form-horizontal" action="<?php echo base_url().'lapor/laporkan';?>" method="post">
+    	<div class="row">
+    	 
+    	</div>
+    	<form class="form-horizontal" action="<?=base_url()?>lapor/laporkan" method="post" enctype="multipart/form-data">
 			<fieldset>
+				<div class="form-group">
+					<label class="col-md-4 control-label"></label>
+					<div class="col-md-5">
+					<center><?=$this->session->flashdata('pesan')?></center>
+				</div>
+				</div>
 				<!-- Text input-->
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="nik">NIK : </label>
@@ -34,9 +43,9 @@
 
 				<!-- Text input-->
 				<div class="form-group">
-				  	<label class="col-md-4 control-label" for="lokasi">Lokasi Kejadian : </label>  
+				  	<label class="col-md-4 control-label" for="keterangan">Keterangan : </label>  
 				  		<div class="col-md-5">
-				  			<input id="lokasi" name="lokasi" type="text" placeholder="Masukkan lokasi kejadian" class="form-control input-md" required="">
+				  			<input id="keterangan" name="keterangan" type="text" placeholder="Masukkan kronologi kejadian" class="form-control input-md" required="">
 				    	</div>
 				</div>
 
@@ -44,18 +53,18 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label" for="foto">Foto : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="foto" class="input-file" type="file">
+				    		<input id="foto" name="img" class="input-file" type="file">
 				  		</div>
 				</div>
 
 				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-5">
-						<input type="submit" class="btn btn-primary btn-xm" value="Laporkan"></input>
+						<input type="submit" class="btn btn-primary btn-xm" value="laporkan"></input>
 					</div>
 				</div>
 			</fieldset>
-		</form>
+	</form>
 		</div>
 		<br>
 		<br>
