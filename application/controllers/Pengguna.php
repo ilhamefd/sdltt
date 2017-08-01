@@ -29,6 +29,8 @@ class Pengguna extends CI_Controller {
 		$data=array('title'=>'Tambah Pengguna',
 					'isi'  =>'adminpages/pengguna/add'
 						);
+		$data['jabatan'] = $this->m_global->get_data_all('kehadiran', null);
+
 		$this->load->view('adminlayout/wrapper',$data);	
 
 	}
@@ -60,11 +62,11 @@ class Pengguna extends CI_Controller {
 			$menu_data 	= [
 						'username' 			=> $post['username'],
 						'password'			=> md5($post['password']),
-						'jabatan'			=> $post['jabatan'],
+						'user_jabatan'			=> $post['jabatan'],
 						'level'				=> $post['level']
 						// 'created_by'		=> user_data()->id
 					  ];
-			$x = $this->m_global->get_data_all('user',null,['jabatan' => $menu_data['jabatan']]);
+			$x = $this->m_global->get_data_all('user',null,['user_jabatan' => $menu_data['user_jabatan']]);
 			if($x) {			
 					$result['msg'] = 'Jabatan sudah terisi !';
 					$result['sts'] = '0';
@@ -104,10 +106,10 @@ class Pengguna extends CI_Controller {
 			$menu_data 	= [
 						'username' 			=> $post['username'],
 						'password'			=> $password_lama[0]->password,
-						'jabatan'			=> $post['jabatan'],
+						'user_jabatan'		=> $post['jabatan'],
 						'level'				=> $post['level']
 					  ];
-			$x = $this->m_global->get_data_all('user',null,['jabatan' => $menu_data['jabatan']]);
+			$x = $this->m_global->get_data_all('user',null,['user_jabatan' => $menu_data['user_jabatan']]);
 			if($x) {
 				if($x[0]->id !== $id) {
 					$result['msg'] = 'Jabatan sudah terisi !';
@@ -117,11 +119,11 @@ class Pengguna extends CI_Controller {
 					$role = $this->m_global->update('user', $menu_data, ['id' => $id]);
 
 					if($role) {
-						$result['msg'] = 'Data pengguna berhasil ditambahakan !';
+						$result['msg'] = 'Data pengguna berhasil dirubah !';
 						$result['sts'] = '1';
 						redirect('pengguna');
 					} else {
-						$result['msg'] = 'Data pengguna gagal ditambahakan !';
+						$result['msg'] = 'Data pengguna gagal dirubah !';
 						$result['sts'] = '0';
 					}
 				}
@@ -131,10 +133,10 @@ class Pengguna extends CI_Controller {
 				$role = $this->m_global->update('user', $menu_data, ['id' => $id]);
 
 				if($role) {
-					$result['msg'] = 'Data pengguna berhasil ditambahakan !';
+					$result['msg'] = 'Data pengguna berhasil dirubah !';
 					$result['sts'] = '1';
 				} else {
-					$result['msg'] = 'Data pengguna gagal ditambahakan !';
+					$result['msg'] = 'Data pengguna gagal dirubah !';
 					$result['sts'] = '0';
 				}
 			}
@@ -143,10 +145,10 @@ class Pengguna extends CI_Controller {
 			$menu_data 	= [
 						'username' 			=> $post['username'],
 						'password' 			=> md5($password),
-						'jabatan'			=> $post['jabatan'],
+						'user_jabatan'		=> $post['jabatan'],
 						'level'				=> $post['level']
 					  ];
-			$x = $this->m_global->get_data_all('user',null,['jabatan' => $menu_data['jabatan']]);
+			$x = $this->m_global->get_data_all('user',null,['user_jabatan' => $menu_data['user_jabatan']]);
 			if($x) {
 				if($x[0]->id !== $id) {
 					$result['msg'] = 'Jabatan sudah terisi !';
@@ -188,9 +190,11 @@ class Pengguna extends CI_Controller {
 
 	}
 
-	public function del($id)
+	public function del()
 	{
+		$id=$this->input->post('id');
 		$this->m_global->delete('user', ['id' => $id]);
+        $this->session->set_flashdata("pesan", "<center><div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Pengguna berhasil dihapus !!</div></div><center>");
 		redirect('pengguna');
 
 	}

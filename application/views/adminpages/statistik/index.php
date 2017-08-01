@@ -62,7 +62,9 @@
                                         <td><?php echo $value->nm_pk ?></td>
                                         <td><?php echo $value->jml ?></td>
                                         <td align="center"><a href="<?php echo site_url('Admin_Statistik/edit_pekerjaan/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
-                                        <a href="<?php echo site_url('Admin_Statistik/del/'.$value->id.'') ?>" data-confirm="Apakah anda yakin untuk menghapus data ini?"><span class="btn btn-danger btn-xs"> <i class="fa fa-trash" aria-hidden="true"></i> Delete </span></a></td>
+                                        <button type="button" value="<? echo $value->id ?>" class="btn btn-danger btn-xs confirm">
+                                            <i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
+                                        </button>
                                     </tr>    
                             <?php $i++;
                             } ?>
@@ -78,10 +80,35 @@
 
                      
     <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
+    // $(document).ready(function() {
+    //     $('#dataTables-example').DataTable({
+    //         responsive: true
+    //     });
+    // });
+
+    $(document).on("click",".confirm",function(){
+        var id=$(this).attr("value");
+        swal({
+            title:"Hapus",
+            text:"Yakin akan menghapus data ini?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Hapus",
+            closeOnConfirm: true,
+        }).then(function(){
+             $.ajax({
+                url:"Admin_Statistik/del/",
+                type: "POST",
+                data:{id:id},
+                success: function(){
+                    swal("Success!","Penghapusan data berhasil","success");
+                        setTimeout(function() {
+                            window.location.href = "<?php echo site_url('Admin_Statistik'); ?>";
+                        }, 1000);
+                }
+             });
         });
     });
+
     </script>
 

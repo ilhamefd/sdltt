@@ -39,7 +39,7 @@
     <!-- jQuery -->
     <script src="<?php echo base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
     
-    <script src="<?php echo base_url(); ?>assets/sweet-alert/js/sweetalert2.minjs"></script>
+    <script src="<?php echo base_url(); ?>assets/sweet-alert/js/sweetalert2.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -49,7 +49,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="<?php echo base_url(); ?>assets/dist/js/sb-admin-2.js"></script>
-    <script src="<?php echo base_url(); ?>assets/js/sids.js"></script>
+    <!-- <script src="<?php echo base_url(); ?>assets/js/sids.js"></script> -->
     <script type="text/javascript" src="<?php echo base_url();?>assets/ckeditor/ckeditor.js"></script>
 </head>
 

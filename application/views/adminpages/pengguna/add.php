@@ -36,13 +36,9 @@
 							    	<span class="input-group-addon"><span class="fa fa-cubes"></span></span>
 							    	<select class="form-control" name="jabatan">
 							    		<option value="">- Pilih Jabatan -</option>
-							    		<option value="kepdes">Kepala Desa</option>
-							    		<option value="sekdes">Sekretaris Desa</option>
-							    		<option value="bendahara">Bendahara Desa</option>
-							    		<option value="kaur1">Kepala Urusan 1</option>
-							    		<option value="kaur2">Kepala Urusan 2</option>
-							    		<option value="kaur3">Kepala Urusan 3</option>
-							    		<option value="kaur4">Kepala Urusan 4</option>
+                            			<? foreach ($jabatan as $key => $value) { ?>
+							    		<option value="<? echo $value->jabatan ?>"><? echo $value->jabatan ?></option>
+                            			<? } ?>
 							    	</select>
 						    	</div>
 						    </div>

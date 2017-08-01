@@ -14,6 +14,7 @@ Class M_login extends CI_Model {
 				$sess = array('id' => $row->id,
 							'username' => $row->username,
 							'password' => $row->password,
+							'jabatan' => $row->user_jabatan,
 							'level' => $row->level
 							);
 				

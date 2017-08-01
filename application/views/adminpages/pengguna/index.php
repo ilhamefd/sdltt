@@ -3,6 +3,7 @@
         <h1><?php echo $title ?></h1>
         <div class="row">
             <div class="col-lg-12">
+                <center><?=$this->session->flashdata('pesan')?></center>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <a href="<?php echo site_url('pengguna/add') ?>" class="btn btn-success"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Data</a>
@@ -20,16 +21,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $i = 1;
+                            <?php
+                            $i = 1;
                             foreach ($pengguna as $key => $value) { ?>
                                 <tr class="odd gradeX">
                                         <td align="center"><?php echo $i ?></td>
                                         <td><?php echo $value->username ?></td>
-                                        <td><?php echo $value->jabatan ?></td>
+                                        <td><?php echo $value->user_jabatan ?></td>
                                         <td><?php echo $value->level ?></td>
                                         <td align="center"><a href="<?php echo site_url('pengguna/edit/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
-                                        <!-- <span>&nbsp;</span> -->
-                                        <a href="<?php echo site_url('pengguna/del/'.$value->id.'') ?>" data-confirm="Apakah anda yakin untuk menghapus data ini?"><span class="btn btn-danger btn-xs"> <i class="fa fa-trash" aria-hidden="true"></i> Delete </span></a></td>
+                                        <button type="button" value="<? echo $value->id ?>" class="btn btn-danger btn-xs confirm">
+                                            <i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
+                                        </button>
                                     </tr>    
                             <?php $i++;
                             } ?>
@@ -43,12 +46,36 @@
     </div>
  </div>
 
-                     
-    <script>
+<script type="text/javascript">
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true
         });
     });
+
+    $(document).on("click",".confirm",function(){
+        var id=$(this).attr("value");
+        swal({
+            title:"Hapus",
+            text:"Yakin akan menghapus pengguna ini?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Hapus",
+            closeOnConfirm: true,
+        }).then(function(){
+             $.ajax({
+                url:"pengguna/del/",
+                type: "POST",
+                data:{id:id},
+                success: function(){
+                    swal("Success!","Penghapusan data berhasil","success");
+                        setTimeout(function() {
+                            window.location.href = "<?php echo site_url('pengguna'); ?>";
+                        }, 1000);
+                }
+             });
+        });
+    });
+
     </script>
 

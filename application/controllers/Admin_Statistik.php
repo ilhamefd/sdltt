@@ -81,11 +81,11 @@ class Admin_Statistik extends CI_Controller {
 					$role = $this->m_global->insert('pekerjaan', $menu_data);
 
 					if($role) {
-						$result['msg'] = 'Data Pekerjaan berhasil ditambahakan !';
+						$result['msg'] = 'Data Pekerjaan berhasil ditambahkan !';
 						$result['sts'] = '1';
 						redirect('Admin_Statistik');
 					} else {
-						$result['msg'] = 'Data Pekerjaan gagal ditambahakan !';
+						$result['msg'] = 'Data Pekerjaan gagal ditambahkan !';
 						$result['sts'] = '0';
 					}
 				}
@@ -135,6 +135,7 @@ class Admin_Statistik extends CI_Controller {
 					if($role) {
 						$result['msg'] = 'Data Pekerjaan berhasil dirubah !';
 						$result['sts'] = '1';
+						redirect('Admin_Statistik');
 					} else {
 						$result['msg'] = 'Data Pekerjaan gagal dirubah !';
 						$result['sts'] = '0';
@@ -163,8 +164,9 @@ class Admin_Statistik extends CI_Controller {
 
 	}
 
-	public function del($id)
+	public function del()
 	{
+		$id=$this->input->post('id');
 		$this->m_global->delete('pekerjaan', ['id' => $id]);
 		redirect('Admin_Statistik');
 

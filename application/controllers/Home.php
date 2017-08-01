@@ -5,6 +5,8 @@ class Home extends CI_Controller {
 		$data=array('title'=>'Web Desa.id',
 					'isi'  =>'userpages/home/homeuser'
 						);
-		$this->load->view('userlayout/wrapper',$data);	
+		$data['hadir']=$this->m_global->get_data_all('kehadiran');
+
+		$this->load->view('userlayout/wrapper',$data);
 	}
 }

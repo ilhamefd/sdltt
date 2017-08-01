@@ -35,7 +35,7 @@
 								<div class="form-group input-group">
 							    	<span class="input-group-addon"><span class="fa fa-cubes"></span></span>
 							    	<select class="form-control" name="jabatan">
-							    		<option value="<?php echo $profil[0]->jabatan ?>"><?php echo $profil[0]->jabatan ?></option>
+							    		<option value="<?php echo $profil[0]->user_jabatan ?>"><?php echo $profil[0]->user_jabatan ?></option>
 							    		<option value="kepdes">Kepala Desa</option>
 							    		<option value="sekdes">Sekretaris Desa</option>
 							    		<option value="bendahara">Bendahara Desa</option>
