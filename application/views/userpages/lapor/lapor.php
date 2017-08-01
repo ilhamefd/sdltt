@@ -14,7 +14,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-5">
-					<center><?=$this->session->flashdata('pesan')?></center>
+					<center><?=$this->session->flashdata('pesan');?></center>
 				</div>
 				</div>
 				<!-- Text input-->
@@ -60,7 +60,7 @@
 				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-5">
-						<input type="submit" class="btn btn-primary btn-xm" value="laporkan"></input>
+						<input type="submit" id="os" class="btn btn-primary" value="laporkan"></input>
 					</div>
 				</div>
 			</fieldset>
@@ -76,3 +76,27 @@
     </div>
   </div>
 </div>
+
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+	$('.btn').on('click', function(){
+		
+		var add_url = $(this).attr('');
+
+		swal({
+			title: "Laporan berhasil dikirim",
+			type: "success",
+			// showCancelButton: true,
+			// confirmButtonColor: "#DD6B55",
+			// confirmButtonText: "Berhasil!",
+			// cancelButtonText: "Batalkan",
+			//closeOnConfirm: true			
+		}, function(){
+			window.location.href = add_url;
+		});
+
+		return false
+	});
+
+});
+</script> -->

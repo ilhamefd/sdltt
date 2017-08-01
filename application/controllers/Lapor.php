@@ -45,11 +45,11 @@ class Lapor extends CI_Controller {
 
                 $this->m_global->insert('lapor',$data); //akses model untuk menyimpan ke database
                 //pesan yang muncul jika berhasil diupload pada session flashdata
-                $this->session->set_flashdata("pesan", "<center><div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div><center>");
+                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success fade in\" id=\"alert\">Laporan Berhasil Dikirim !!</div></div>");
                 redirect('lapor'); //jika berhasil maka akan ditampilkan view vupload
             }else{
                 //pesan yang muncul jika terdapat error dimasukkan pada session flashdata
-                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Gagal upload gambar !!</div></div>");
+                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Laporan Gagal Dikirim !!</div></div>");
                 redirect('lapor'); //jika gagal maka akan ditampilkan form upload
             }
         }

@@ -33,7 +33,7 @@
                         </li>
                         
                         <li>
-                            <a class="white" href="#"><i class="fa fa-eye fa-fw fcm"></i> Baca Pengaduan</a>
+                            <a class="white" href="<?php echo site_url('admin_pengaduan')?>"><i class="fa fa-eye fa-fw fcm"></i> Baca Pengaduan</a>
                         </li>
 
                         <li>
@@ -44,7 +44,7 @@
                             <a class="white" href="#"><i class="fa fa-cloud-upload fa-fw"></i> Perbarui Konten Beranda<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="white" href="flot.html"><i class="fa fa-image fa-fw"></i> Slider Gambar</a>
+                                    <a class="white" href="<?php echo site_url('admin_slide')?>"><i class="fa fa-image fa-fw"></i> Slider Gambar</a>
                                 </li>
                                 <li>
                                     <a class="white" href="morris.html"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>

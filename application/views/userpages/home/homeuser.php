@@ -163,4 +163,4 @@
       <p>Dinas 6</p>
     </div> 
   </div>
-</div><br>
+</div>
