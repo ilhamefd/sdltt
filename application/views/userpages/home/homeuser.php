@@ -54,9 +54,9 @@
         <tbody>
           <?php foreach ($hadir as $key => $value) { ?>
           <tr>
-            <td class="text-center"><? echo $value->jabatan ?></td>
+            <td class="text-center"><?php echo $value->jabatan ?></td>
             <td class="text-center">
-            <?
+            <?php
             $con = $value->status;
             // echo $con;
             if ($con == '1') {
@@ -71,9 +71,9 @@
             }
             ?>
             </td>
-            <td><? echo $value->last_update ?></td>
+            <td><?php echo $value->last_update ?></td>
           </tr>
-          <? } ?>
+          <?php } ?>
         </tbody>
       </table>
     </div>

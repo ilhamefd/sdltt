@@ -18,7 +18,12 @@ class Admin_pengaduan extends CI_Controller {
 		$this->load->view('adminlayout/wrapper',$data);	
 	}
 
-	public function baca(){
-		
+	public function baca($id){
+		$baca= $this->input->post('baca');
+		$data   = array(
+			'status' => $baca,
+			);
+		$this->m_global->update('lapor',$data,['id'=>$id]);
+		redirect('admin_pengaduan');	
 	}
 }

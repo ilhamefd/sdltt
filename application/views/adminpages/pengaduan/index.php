@@ -5,7 +5,7 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">Data Pengaduan</h1>
                     </div>
-                                 
+
                     <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -35,7 +35,20 @@
                   </td>
                   
                   <td>
-                    <a href="<?php echo site_url('admin_pengaduan/baca/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Tandai Dibaca </span></a> 
+                    <form action='<?php echo site_url('admin_pengaduan/baca/'.$value->id.'') ?>'' method='post'>
+                     <?php
+                 $con = $value->status;
+            // echo $con;
+            if ($con == '1') {
+                echo "<button type='submit' name='baca' value='2' class='btn btn-warning btn-xs'><i class='fa fa-pencil-square-o' aria-hidden='true'></i> Tandai</button>"; 
+            
+            }
+            if ($con == '2') {
+             echo "<span class='label label-success'>Sudah Dibaca</span>";
+            }
+            ?>
+                    </form>
+                    
                   </td>
                 </tr>    
             <?php $i++;

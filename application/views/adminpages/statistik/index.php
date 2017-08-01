@@ -62,7 +62,7 @@
                                         <td><?php echo $value->nm_pk ?></td>
                                         <td><?php echo $value->jml ?></td>
                                         <td align="center"><a href="<?php echo site_url('Admin_Statistik/edit_pekerjaan/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
-                                        <button type="button" value="<? echo $value->id ?>" class="btn btn-danger btn-xs confirm">
+                                        <button type="button" value="<?php echo $value->id ?>" class="btn btn-danger btn-xs confirm">
                                             <i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
                                         </button>
                                     </tr>    

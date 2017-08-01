@@ -30,7 +30,7 @@
                                         <td><?php echo $value->user_jabatan ?></td>
                                         <td><?php echo $value->level ?></td>
                                         <td align="center"><a href="<?php echo site_url('pengguna/edit/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
-                                        <button type="button" value="<? echo $value->id ?>" class="btn btn-danger btn-xs confirm">
+                                        <button type="button" value="<?php echo $value->id ?>" class="btn btn-danger btn-xs confirm">
                                             <i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
                                         </button>
                                     </tr>    
