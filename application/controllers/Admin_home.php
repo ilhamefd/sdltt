@@ -23,6 +23,7 @@ class Admin_home extends CI_Controller {
 
 	public function update($jabatan){
 		$hadir= $this->input->post('tombol');
+		date_default_timezone_set('Asia/Jakarta');
 		$waktu = date("l, d/m/Y, H:i:sa");
 		$data = array(
 			'status' => $hadir,
