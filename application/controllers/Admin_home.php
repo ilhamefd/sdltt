@@ -5,6 +5,7 @@ class Admin_home extends CI_Controller {
 	{
 		parent::__construct();
 	    $this->load->model('SecurityModel');
+	    $this->load->helper('tglindo_helper');
 
 		//Do your magic here
 	}
@@ -24,10 +25,13 @@ class Admin_home extends CI_Controller {
 	public function update($jabatan){
 		$hadir= $this->input->post('tombol');
 		date_default_timezone_set('Asia/Jakarta');
-		$waktu = date("l, d/m/Y, H:i:sa");
+
+		$tgl = tgl_indo(date('Y/m/d'));
+		$hari = nama_hari();
+		$jam = date('H:i');
 		$data = array(
 			'status' => $hadir,
-			'last_update' => $waktu
+			'last_update' => $hari.', '.$tgl.', '.$jam
 			);
 		$this->m_global->update('kehadiran',$data,['jabatan'=>$jabatan]);
 		redirect('Admin_home');		
