@@ -25,7 +25,7 @@ class Lapor extends CI_Controller {
         $config['max_width']  = '1288'; //lebar maksimum 1288 px
         $config['max_height']  = '768'; //tinggi maksimu 768 px
         $config['file_name'] = $nmfile; //nama yang terupload nantinya
-
+     
         $this->upload->initialize($config);
         
         if($_FILES['img']['name'])
@@ -40,6 +40,7 @@ class Lapor extends CI_Controller {
                   'nama'=>$this->input->post('nama'),
                   'alamat'=>$this->input->post('alamat'),
                   'keterangan'=>$this->input->post('keterangan'),
+                  'status' => '1',
                   
                 );
 

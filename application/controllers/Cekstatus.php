@@ -6,6 +6,7 @@ class Cekstatus extends CI_Controller {
 		$data=array('title'=>'Cek Status Pengajuan',
 					'isi'  =>'userpages/cekstatus/cekstatus'
 						);
+		$data['pengajuan'] = $this->m_global->get_data_all('pengajuan', null);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 	

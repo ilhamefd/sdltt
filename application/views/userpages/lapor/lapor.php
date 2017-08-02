@@ -76,27 +76,3 @@
     </div>
   </div>
 </div>
-
-<!-- <script type="text/javascript">
-$(document).ready(function(){
-	$('.btn').on('click', function(){
-		
-		var add_url = $(this).attr('');
-
-		swal({
-			title: "Laporan berhasil dikirim",
-			type: "success",
-			// showCancelButton: true,
-			// confirmButtonColor: "#DD6B55",
-			// confirmButtonText: "Berhasil!",
-			// cancelButtonText: "Batalkan",
-			//closeOnConfirm: true			
-		}, function(){
-			window.location.href = add_url;
-		});
-
-		return false
-	});
-
-});
-</script> -->

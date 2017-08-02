@@ -28,7 +28,7 @@ class Admin_slide extends CI_Controller {
 						);
 		$data['editslide'] = $this->m_global->get_data_all('slide_image',null,['id' => $id]);
 
-		// $this->load->view('adminlayout/wrapper',$data);	
+		$this->load->view('adminlayout/wrapper',$data);	
 
 	}
 

@@ -47,7 +47,7 @@
         <thead>
           <tr>
             <th class="text-center">Jabatan</th>
-            <th>Status</th>
+            <th><center>Status</center></th>
             <th>Update Terbaru</th>
           </tr>
         </thead>
