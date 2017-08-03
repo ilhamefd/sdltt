@@ -29,7 +29,7 @@
                   <td><?php echo $value->nik ?></td>
                   <td><?php echo $value->nama ?></td>
                   <td><?php echo $value->nohp ?></td>
-                  <td><?php echo $value->jenis ?></td>
+                  <td><?php echo $value->nm_surat ?></td>
                   <td><?php echo $value->keperluan ?></td>
                                     
                   <td>
@@ -71,3 +71,4 @@ $(document).ready(function() {
     $('#example').DataTable();
 } );
 </script>
+<br><br><br><br>

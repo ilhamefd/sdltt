@@ -5,17 +5,21 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">Data Pengaduan</h1>
                     </div>
-
+                </div>
+                 <div class="panel panel-default">
+      <div class="panel-heading">Daftar pengaduan masyarakat</div>
+      <div class="panel-body">
+    </div>
                     <table id="example" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th>No.</th>
-                <th>NIK</th>
-                <th>Nama Pelapor</th>
-                <th>Alamat Pelapor</th>
-                <th>Keterangan</th>
-                <th>Gambar</th>
-                <th>Status</th>
+                <th><center>No.</center></th>
+                <th><center>NIK</center></th>
+                <th><center>Nama Pelapor</center></th>
+                <th><center>Alamat Pelapor</center></th>
+                <th><center>Keterangan</center></th>
+                <th><center>Gambar</center></th>
+                <th><center>Status</center></th>
             </tr>
         </thead>
         <tbody>
@@ -56,6 +60,7 @@
            
         </tbody>
     </table>
+  </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->

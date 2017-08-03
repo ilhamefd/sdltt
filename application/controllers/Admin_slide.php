@@ -32,7 +32,7 @@ class Admin_slide extends CI_Controller {
 
 	}
 
-	public function simpan(){
+	public function simpan($img){
         $this->load->library('upload');
         $nmfile = "file_".time(); //nama file saya beri nama langsung dan diikuti fungsi time
         $config['upload_path'] = './assets/slide/'; //path folder
@@ -55,7 +55,7 @@ class Admin_slide extends CI_Controller {
                   'judul' =>$this->input->post('judul'),                  
                 );
                 
-                $this->m_global->_insert_update('slide_image',$data); //akses model untuk menyimpan ke database
+                $this->m_global->update('slide_image',$data,['id' => $id]); //akses model untuk menyimpan ke database
                 //pesan yang muncul jika berhasil diupload pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success fade in\" id=\"alert\">berhasil upload gambar !!</div></div>");
                 redirect('admin_slide'); //jika berhasil maka akan ditampilkan view vupload
