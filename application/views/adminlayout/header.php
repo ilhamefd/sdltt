@@ -37,7 +37,7 @@
                         </li>
 
                         <li>
-                            <a class="white" href="#"><i class="fa fa-list  fa-fw fcm"></i> List Pengajuan Surat</a>
+                            <a class="white" href="<?php echo site_url('admin_pengajuan')?>"><i class="fa fa-list  fa-fw fcm"></i> List Pengajuan Surat</a>
                         </li>
 
                         <li>
@@ -47,7 +47,7 @@
                                     <a class="white" href="<?php echo site_url('admin_slide')?>"><i class="fa fa-image fa-fw"></i> Slider Gambar</a>
                                 </li>
                                 <li>
-                                    <a class="white" href="morris.html"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>
+                                    <a class="white" href="#"><i class="fa fa-newspaper-o fa-fw"></i> Berita</a>
                                 </li>
                                 <li>
                                     <a class="white" href="<?php echo site_url('admin_video')?>"><i class="fa fa-youtube-play fa-fw"></i> Video</a>

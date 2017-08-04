@@ -12,7 +12,7 @@
 				    	
 				    	<center><img height=200px src="<?php echo base_url(); ?>assets/slide/<?php echo $editslide[0]->nm_gbr ?>"></center><br>
 
-				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>admin_slide/simpan/<?php echo $editslide[0]->id ?>">
+				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>admin_slide/simpan/<?php echo $editslide[0]->id ?>" enctype="multipart/form-data">
 				        	
 				        	<div class="col-lg-3">
 							    <label>Nama Gambar</label>
@@ -40,7 +40,7 @@
 						    <div class="col-lg-9">
 								<div class="form-group input-group">
 							    	<span class="input-group-addon"><span class="fa fa-file-image-o"></span></span>
-							        	<input type="file" name="img" class="form-control" placeholder="Pilih Gambar">
+							        	<input type="file" name="img" class="input-file" placeholder="Pilih Gambar">
 						    	</div>				
 						    </div>
 

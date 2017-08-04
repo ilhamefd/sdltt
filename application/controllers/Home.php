@@ -11,6 +11,7 @@ class Home extends CI_Controller {
 					'isi'  =>'userpages/home/homeuser'
 						);
 		$data['hadir']=$this->m_global->get_data_all('kehadiran');
+		$data['slide']=$this->m_global->get_data_all('slide_image');
 
 		$this->load->view('userlayout/wrapper',$data);
 	}

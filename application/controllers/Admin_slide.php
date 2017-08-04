@@ -32,7 +32,7 @@ class Admin_slide extends CI_Controller {
 
 	}
 
-	public function simpan($img){
+	public function simpan($id){
         $this->load->library('upload');
         $nmfile = "file_".time(); //nama file saya beri nama langsung dan diikuti fungsi time
         $config['upload_path'] = './assets/slide/'; //path folder
@@ -42,8 +42,9 @@ class Admin_slide extends CI_Controller {
         $config['max_height']  = '768'; //tinggi maksimu 768 px
         $config['file_name'] = $nmfile; //nama yang terupload nantinya
 
+        $this->upload->overwrite = true;
         $this->upload->initialize($config);
-        
+
         if($_FILES['img']['name'])
         {
             if ($this->upload->do_upload('img'))

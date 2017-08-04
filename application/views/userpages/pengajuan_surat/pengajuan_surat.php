@@ -68,7 +68,7 @@
 				<div class="form-group">
 					<label class="col-md-5 control-label" for="foto">Lapiran 1 : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="img1" class="input-file" type="file">
+				    		<input id="foto" name="userfile[]" class="input-file" type="file">
 				  		</div>
 				</div>
 
@@ -76,7 +76,7 @@
 				<div class="form-group">
 					<label class="col-md-5 control-label" for="foto">Lapiran 2 : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="img2" class="input-file" type="file">
+				    		<input id="foto" name="userfile[]" class="input-file" type="file">
 				  		</div>
 				</div>
 
@@ -84,7 +84,7 @@
 				<div class="form-group">
 					<label class="col-md-5 control-label" for="foto">Lapiran 3 : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="img3" class="input-file" type="file">
+				    		<input id="foto" name="userfile[]" class="input-file" type="file">
 				  		</div>
 				</div>
 
@@ -92,7 +92,7 @@
 				<div class="form-group">
 					<label class="col-md-5 control-label" for="foto">Lapiran 4 : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="img4" class="input-file" type="file">
+				    		<input id="foto" name="userfile[]" class="input-file" type="file">
 				  		</div>
 				</div>
 
@@ -100,7 +100,7 @@
 				<div class="form-group">
 					<label class="col-md-5 control-label" for="foto">Lapiran 5 : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="img5" class="input-file" type="file">
+				    		<input id="foto" name="userfile[]" class="input-file" type="file">
 				  		</div>
 				</div>
 
@@ -108,7 +108,7 @@
 				<div class="form-group">
 					<label class="col-md-5 control-label" for="foto">Lapiran 6 : </label>
 				  		<div class="col-md-4">
-				    		<input id="foto" name="img6" class="input-file" type="file">
+				    		<input id="foto" name="userfile[]" class="input-file" type="file">
 				  		</div>
 				</div>
 

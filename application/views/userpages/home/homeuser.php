@@ -7,25 +7,44 @@
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img src="https://placehold.it/800x400?text=IMAGE" alt="Image">
+          <img src="<?php echo base_url(); ?>assets/slide/<?php echo $slide[0]->nm_gbr ?>" alt="<?php echo $slide[0]->judul ?>">
           <div class="carousel-caption">
-            <h3>Sell $</h3>
-            <p>Money Money.</p>
+            <h3><?php echo $slide[0]->judul ?></h3>
+            <p>isi</p>
           </div>      
         </div>
 
         <div class="item">
-          <img src="https://placehold.it/800x400?text=Another Image Maybe" alt="Image">
+          <img src="<?php echo base_url(); ?>assets/slide/<?php echo $slide[1]->nm_gbr ?>" alt="<?php echo $slide[1]->judul ?>">
           <div class="carousel-caption">
-            <h3>More Sell $</h3>
+            <h3><?php echo $slide[1]->judul ?></h3>
             <p>Lorem ipsum...</p>
           </div>      
         </div>
+
+        <div class="item">
+          <img src="<?php echo base_url(); ?>assets/slide/<?php echo $slide[2]->nm_gbr ?>" alt="<?php echo $slide[2]->judul ?>">
+          <div class="carousel-caption">
+            <h3><?php echo $slide[2]->judul ?></h3>
+            <p>Lorem ipsum...</p>
+          </div>      
+        </div>
+
+        <div class="item">
+          <img src="<?php echo base_url(); ?>assets/slide/<?php echo $slide[3]->nm_gbr ?>" alt="<?php echo $slide[3]->judul ?>">
+          <div class="carousel-caption">
+            <h3><?php echo $slide[3]->judul ?></h3>
+            <p>Lorem ipsum...</p>
+          </div>      
+        </div>
+
       </div>
 
       <!-- Left and right controls -->
