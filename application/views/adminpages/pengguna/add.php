@@ -36,9 +36,9 @@
 							    	<span class="input-group-addon"><span class="fa fa-cubes"></span></span>
 							    	<select class="form-control" name="jabatan">
 							    		<option value="">- Pilih Jabatan -</option>
-                            			<? foreach ($jabatan as $key => $value) { ?>
-							    		<option value="<? echo $value->jabatan ?>"><? echo $value->jabatan ?></option>
-                            			<? } ?>
+                            			<?php foreach ($jabatan as $key => $value) { ?>
+							    		<option value="<?php echo $value->jabatan ?>"><?php echo $value->jabatan ?></option>
+                            			<?php } ?>
 							    	</select>
 						    	</div>
 						    </div>

@@ -11,7 +11,7 @@
         <li data-target="#myCarousel" data-slide-to="3"></li>
       </ol>
 
-      <!-- Wrapper for slides -->
+      <!-- Wrapper for slides 400*800px-->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img src="<?php echo base_url(); ?>assets/slide/<?php echo $slide[0]->nm_gbr ?>" alt="<?php echo $slide[0]->judul ?>">
@@ -102,12 +102,20 @@
 <hr>
 </div>
 </div>
-
+<!-- ukuran gambar 150*80px -->
 <div class="container text-center">    
   <h3>Berita Terbaru</h3>
   <br>
   <div class="row">
-    <div class="col-sm-3">
+
+     <?php foreach ($berita as $key => $value) { ?>
+          <div class="col-sm-3">
+              <a href="<?php echo site_url('semua_berita/detail/'.$value->id.'') ?>"><center><img src="<?php echo base_url(); ?>assets/berita/<?php echo $value->gambar?>" class="img-responsive" width="150px" alt="Image"></center>
+              <p><?php echo $value->judul?></p></a>
+          </div>  
+          <?php } ?>
+
+    <!-- <div class="col-sm-3">
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
       <p>Berita 1</p>
     </div>
@@ -122,8 +130,12 @@
     <div class="col-sm-3"> 
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
       <p>Berita 4</p>    
-    </div>
+    </div> -->
   </div>
+  <div class="pull-right">
+    <a href="<?php echo site_url('Semua_berita/index')?>"><h4><u>Lihat Semua Berita....</u></h4></a>
+  </div>
+  <br>
   <hr>
 </div>
 
@@ -132,7 +144,7 @@
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <iframe src="http://www.youtube.com/embed/W7qWa52k-nE" height="190px" allowfullscreen></iframe>
+      <iframe src="<?=$video[0]->link; ?>" height="190px" allowfullscreen></iframe>
       <p>Video Bumper</p>
     </div>
     <div class="col-sm-4" id="map"> 
@@ -144,10 +156,10 @@
 </iframe>
       <p>Peta Lokasi</p>    
     </div>
-    <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Tweeter</p>    
-    </div>  
+    
+    <div class="col-sm-4">
+      <iframe src="<?=$video[1]->link; ?>" height="190px" allowfullscreen></iframe>
+      <p>Live Streaming</p>
     </div>
   </div>
   <hr>
@@ -158,27 +170,27 @@
   <br>
   <div class="row">
     <div class="col-sm-2">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
       <p>Dinas 1</p>
     </div>
     <div class="col-sm-2"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
       <p>Dinas 2</p>    
     </div>
     <div class="col-sm-2"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
       <p>Dinas 3</p>
     </div>
     <div class="col-sm-2"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
       <p>Dinas 4</p>
     </div> 
     <div class="col-sm-2"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
       <p>Dinas 5</p>
     </div>     
     <div class="col-sm-2"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
       <p>Dinas 6</p>
     </div> 
   </div>
