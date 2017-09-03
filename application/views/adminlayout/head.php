@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
      <link rel="icon" type="image/png" href="<?php echo base_url(); ?>img/tico.png">
-    <title>Admin SIDESA - <?php echo $title ?></title>
+    <title>Admin SD LTT - <?php echo $title ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

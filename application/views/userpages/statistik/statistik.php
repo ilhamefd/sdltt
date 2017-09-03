@@ -9,7 +9,7 @@
        
     function drawChart() { 
       var jsonData = $.ajax({ 
-          url: "<?php echo base_url() . 'statistik/data_penduduk' ?>", 
+          url: "<?php echo base_url() . 'statistik/data_siswa' ?>", 
           dataType: "json", 
           async: false 
           }).responseText; 
@@ -18,12 +18,12 @@
       var data = new google.visualization.DataTable(jsonData); 
       
        var options = {
-          title: 'Jumlah Penduduk',
+          title: 'Jumlah Siswa',
           is3D: true,
         };
 
       // Instantiate and draw our chart, passing in some options. 
-      var chart = new google.visualization.PieChart(document.getElementById('penduduk')); 
+      var chart = new google.visualization.PieChart(document.getElementById('siswa')); 
       chart.draw(data,options); 
     } 
  
@@ -39,7 +39,7 @@
        
     function drawChart() { 
       var jsonData = $.ajax({ 
-          url: "<?php echo base_url() . 'statistik/data_pekerjaan' ?>", 
+          url: "<?php echo base_url() . 'statistik/data_kelas' ?>", 
           dataType: "json", 
           async: false 
           }).responseText; 
@@ -48,12 +48,12 @@
       var data = new google.visualization.DataTable(jsonData); 
       
        var options = {
-          title: 'Jenis Pekerjaan',
+          title: 'Kelas',
           is3D: true,
         };
 
       // Instantiate and draw our chart, passing in some options. 
-      var chart = new google.visualization.PieChart(document.getElementById('jeniskerja')); 
+      var chart = new google.visualization.PieChart(document.getElementById('kelas')); 
       chart.draw(data,options); 
     } 
  
@@ -85,7 +85,7 @@
 <div class="konten">
   <div class="container">
     <div class="row">
-    	<center><h2>Statistik Penduduk</h2></center>
+    	<center><h2>Statistik Siswa</h2></center>
     	<hr>
     </div>
   </div>
@@ -94,11 +94,11 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-5">
-        <center><div id="penduduk" style="width: 500px; height: 380px;"></div></center>
+        <center><div id="siswa" style="width: 500px; height: 380px;"></div></center>
       </div>
     
       <div class="col-lg-5">
-        <center><div id="jeniskerja" style="width: 500px; height: 380px;"></div></center>
+        <center><div id="kelas" style="width: 500px; height: 380px;"></div></center>
       </div>
   </div>
 </div>

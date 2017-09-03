@@ -11,10 +11,10 @@ CKEDITOR.editorConfig = function( config ) {
    config.extraPlugins = 'widget';
    config.extraPlugins = 'filebrowser';
    config.extraPlugins = 'popup';
-   config.filebrowserBrowseUrl = '../sids/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
-   config.filebrowserImageBrowseUrl = '../sids/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
-   config.filebrowserFlashBrowseUrl = '../sids/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
-   config.filebrowserUploadUrl = '../sids/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
-   config.filebrowserImageUploadUrl = '../sids/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
-   config.filebrowserFlashUploadUrl = '../sids/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
+   config.filebrowserBrowseUrl = 'https://desaprototipe.000webhostapp.com/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
+   config.filebrowserImageBrowseUrl = 'https://desaprototipe.000webhostapp.com/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
+   config.filebrowserFlashBrowseUrl = 'https://desaprototipe.000webhostapp.com/assets/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
+   config.filebrowserUploadUrl = 'https://desaprototipe.000webhostapp.com/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
+   config.filebrowserImageUploadUrl = 'https://desaprototipe.000webhostapp.com/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
+   config.filebrowserFlashUploadUrl = 'https://desaprototipe.000webhostapp.com/assets/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
 };

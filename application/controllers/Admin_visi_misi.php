@@ -13,7 +13,7 @@ class Admin_visi_misi extends CI_Controller {
       	$this->SecurityModel->level_admin();
 
 		$data=array('title'=>'Update Konten Visi & Misi',
-					'isi'  =>'adminpages/profil_desa/visi_misi/edit'
+					'isi'  =>'adminpages/profil_sekolah/visi_misi/edit'
 					);
 
 		$data['record']	= $this->m_global->get_data_all('konten', null, ['jenis'=>'visi_misi']);

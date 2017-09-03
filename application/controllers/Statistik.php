@@ -3,16 +3,16 @@
 class Statistik extends CI_Controller {
 	
 	public function index() {
-		$data=array('title'=>'Statistik Penduduk',
+		$data=array('title'=>'Statistik Siswa',
 					'isi'  =>'userpages/statistik/statistik'
 						);
-		$data['record']	= $this->m_global->get_data_all('penduduk', null,null);
+		$data['record']	= $this->m_global->get_data_all('siswa', null,null);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
 
-	public function data_penduduk() 
+	public function data_siswa() 
         { 
-        $data = $this->m_global->get_data_all('penduduk',null,null); 
+        $data = $this->m_global->get_data_all('siswa',null,null); 
  
         //         //data to json 
  
@@ -45,9 +45,9 @@ class Statistik extends CI_Controller {
         echo json_encode($responce); 
         } 
 	
-	public function data_pekerjaan() 
+	public function data_kelas() 
         { 
-        $data = $this->m_global->get_data_all('pekerjaan',null,null); 
+        $data = $this->m_global->get_data_all('kelas',null,null); 
  
         //         //data to json 
  
@@ -67,7 +67,7 @@ class Statistik extends CI_Controller {
             { 
             $responce->rows[]["c"] = array( 
                 array( 
-                    "v" => "$cd->nm_pk", 
+                    "v" => "$cd->nm_kls", 
                     "f" => null 
                 ) , 
                 array( 

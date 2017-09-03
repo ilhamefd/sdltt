@@ -11,12 +11,12 @@
 				    <div class="panel-body">    
 				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>Admin_Statistik/act_add">
 				        	<div class="col-lg-3">
-							    <label>Pekerjaan</label>
+							    <label>Kelas</label>
 						    </div>        	
 						    <div class="col-lg-9">
 								<div class="form-group input-group">
 							    	<span class="input-group-addon"><span class="fa fa-user"></span></span>
-							        	<input type="text" name="pekerjaan" class="form-control" placeholder="Pekerjaan">
+							        	<input type="text" name="kelas" class="form-control" placeholder="Kelas">
 						    	</div>
 						    </div>
 				        	<div class="col-lg-3">

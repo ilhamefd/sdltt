@@ -9,14 +9,14 @@
 				        Edit Data
 				    </div>
 				    <div class="panel-body">    
-				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>Admin_Statistik/simpan/<?php echo $penduduk[0]->id ?>">
+				        <form role="form" method="post" id="myform" action="<?php echo base_url(); ?>Admin_Statistik/simpan/<?php echo $siswa[0]->id ?>">
 				        	<div class="col-lg-3">
 							    <label>Jenis</label>
 						    </div>        	
 						    <div class="col-lg-9">
 								<div class="form-group input-group">
 							    	<span class="input-group-addon"><span class="fa fa-user"></span></span>
-							        	<input type="text" name="jenis" class="form-control" placeholder="Jenis Kelamin" value="<?php echo $penduduk[0]->jk ?>" disabled="true">
+							        	<input type="text" name="jenis" class="form-control" placeholder="Jenis Kelamin" value="<?php echo $siswa[0]->jk ?>" disabled="true">
 						    	</div>
 						    </div>
 				        	<div class="col-lg-3">
@@ -25,7 +25,7 @@
 						    <div class="col-lg-9">
 								<div class="form-group input-group">
 							    	<span class="input-group-addon"><span class="fa fa-bar-chart-o">  </span></span>
-							        	<input type="text" name="jumlah" class="form-control" placeholder="Jumlah" value="<?php echo $penduduk[0]->jml ?>">
+							        	<input type="text" name="jumlah" class="form-control" placeholder="Jumlah" value="<?php echo $siswa[0]->jml ?>">
 						    	</div>
 						    </div>
 						    <div class="col-lg-3"></div>

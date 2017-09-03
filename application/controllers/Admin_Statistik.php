@@ -14,11 +14,11 @@ class Admin_Statistik extends CI_Controller {
 	{
       	$this->SecurityModel->level_admin();
 
-		$data=array('title'=>'Statistik Penduduk',
+		$data=array('title'=>'Statistik Siswa',
 					'isi'  =>'adminpages/statistik/index'
 						);
-		$data['penduduk'] = $this->m_global->get_data_all('penduduk', null);
-		$data['pekerjaan'] = $this->m_global->get_data_all('pekerjaan', null);
+		$data['siswa'] = $this->m_global->get_data_all('siswa', null);
+		$data['kelas'] = $this->m_global->get_data_all('kelas', null);
 
 		$this->load->view('adminlayout/wrapper',$data);	
 	}
@@ -27,7 +27,7 @@ class Admin_Statistik extends CI_Controller {
 	{
       	$this->SecurityModel->level_admin();
 
-		$data=array('title'=>'Tambah Pekerjaan',
+		$data=array('title'=>'Tambah Kelas',
 					'isi'  =>'adminpages/statistik/add'
 						);
 		$this->load->view('adminlayout/wrapper',$data);	
@@ -38,22 +38,22 @@ class Admin_Statistik extends CI_Controller {
 	{
       	$this->SecurityModel->level_admin();
 
-		$data=array('title'=>'Edit Jenis Penduduk',
+		$data=array('title'=>'Edit Siswa',
 					'isi'  =>'adminpages/statistik/edit_jenis'
 						);
-		$data['penduduk'] = $this->m_global->get_data_all('penduduk',null,['id' => $id]);
+		$data['siswa'] = $this->m_global->get_data_all('siswa',null,['id' => $id]);
 
 		$this->load->view('adminlayout/wrapper',$data);	
 
 	}
-	public function edit_pekerjaan($id)
+	public function edit_kelas($id)
 	{
       	$this->SecurityModel->level_admin();
 
-		$data=array('title'=>'Edit Pekerjaan Penduduk',
-					'isi'  =>'adminpages/statistik/edit_pekerjaan'
+		$data=array('title'=>'Edit Kelas',
+					'isi'  =>'adminpages/statistik/edit_kelas'
 						);
-		$data['pekerjaan'] = $this->m_global->get_data_all('pekerjaan',null,['id' => $id]);
+		$data['kelas'] = $this->m_global->get_data_all('kelas',null,['id' => $id]);
 
 		$this->load->view('adminlayout/wrapper',$data);	
 
@@ -64,28 +64,28 @@ class Admin_Statistik extends CI_Controller {
 		$result = [];
 		$post 	= $this->input->post();
 
-		$this->form_validation->set_rules('pekerjaan', 'Pekerjaan', 'trim|required');
+		$this->form_validation->set_rules('kelas', 'Kelas', 'trim|required');
 		$this->form_validation->set_rules('jumlah', 'Jumlah', 'trim|required');
 		
 		if ($this->form_validation->run() == true){
 			$menu_data 	= [
-						'nm_pk' 			=> $post['pekerjaan'],
+						'nm_kls' 			=> $post['kelas'],
 						'jml'			    =>$post['jumlah']
 					  ];
-			$x = $this->m_global->get_data_all('pekerjaan',null,['nm_pk' => $menu_data['nm_pk']]);
+			$x = $this->m_global->get_data_all('kelas',null,['nm_kls' => $menu_data['nm_kls']]);
 			if($x) {			
-					$result['msg'] = 'Pekerjaan sudah ada !';
+					$result['msg'] = 'Kelas sudah ada !';
 					$result['sts'] = '0';
 				}
 				else{
-					$role = $this->m_global->insert('pekerjaan', $menu_data);
+					$role = $this->m_global->insert('kelas', $menu_data);
 
 					if($role) {
-						$result['msg'] = 'Data Pekerjaan berhasil ditambahkan !';
+						$result['msg'] = 'Data Kelas berhasil ditambahkan !';
 						$result['sts'] = '1';
 						redirect('Admin_Statistik');
 					} else {
-						$result['msg'] = 'Data Pekerjaan gagal ditambahkan !';
+						$result['msg'] = 'Data Kelas gagal ditambahkan !';
 						$result['sts'] = '0';
 					}
 				}
@@ -106,7 +106,7 @@ class Admin_Statistik extends CI_Controller {
 			'jml' 	=> $jumlah,
 			
 			);
-		$this->m_global->update('penduduk',$data,['id'=>$id]);
+		$this->m_global->update('siswa',$data,['id'=>$id]);
 		redirect('Admin_Statistik');
 	}
 
@@ -115,43 +115,43 @@ class Admin_Statistik extends CI_Controller {
 		$result = [];
 		$post 	= $this->input->post();
 
-		$this->form_validation->set_rules('pekerjaan', 'Pekerjaan', 'trim|required');
+		$this->form_validation->set_rules('kelas', 'kelas', 'trim|required');
 		$this->form_validation->set_rules('jumlah', 'Jumlah', 'trim|required');
 		
 		if ($this->form_validation->run() == true){
 			$menu_data 	= [
-						'nm_pk' 			=> $post['pekerjaan'],
+						'nm_kls' 			=> $post['kelas'],
 						'jml'				=> $post['jumlah']
 					  ];
 
-			$x = $this->m_global->get_data_all('pekerjaan',null,['nm_pk' => $menu_data['nm_pk']]);
+			$x = $this->m_global->get_data_all('kelas',null,['nm_kls' => $menu_data['nm_kls']]);
 			if($x) {
 				if($x[0]->id !== $id) {
-					$result['msg'] = 'Pekerjaan Sudah Ada !';
+					$result['msg'] = 'Kelas Sudah Ada !';
 					$result['sts'] = '0';
 				} else {
-					$role = $this->m_global->update('pekerjaan', $menu_data, ['id' => $id]);
+					$role = $this->m_global->update('kelas', $menu_data, ['id' => $id]);
 
 					if($role) {
-						$result['msg'] = 'Data Pekerjaan berhasil dirubah !';
+						$result['msg'] = 'Data Kelas berhasil dirubah !';
 						$result['sts'] = '1';
 						redirect('Admin_Statistik');
 					} else {
-						$result['msg'] = 'Data Pekerjaan gagal dirubah !';
+						$result['msg'] = 'Data Kelas gagal dirubah !';
 						$result['sts'] = '0';
 					}
 				}
 			}
 			
 			else{
-					$role = $this->m_global->update('pekerjaan', $menu_data, ['id' => $id]);
+					$role = $this->m_global->update('kelas', $menu_data, ['id' => $id]);
 
 					if($role) {
-						$result['msg'] = 'Data Pekerjaan berhasil dirubah !';
+						$result['msg'] = 'Data Kelas berhasil dirubah !';
 						$result['sts'] = '1';
 						redirect('Admin_Statistik');
 					} else {
-						$result['msg'] = 'Data Pekerjaan gagal dirubah !';
+						$result['msg'] = 'Data Kelas gagal dirubah !';
 						$result['sts'] = '0';
 					}
 				}
@@ -167,7 +167,7 @@ class Admin_Statistik extends CI_Controller {
 	public function del()
 	{
 		$id=$this->input->post('id');
-		$this->m_global->delete('pekerjaan', ['id' => $id]);
+		$this->m_global->delete('kelas', ['id' => $id]);
 		redirect('Admin_Statistik');
 
 	}

@@ -15,7 +15,6 @@
                                 <tr>
                                     <th width="50px">No</th>
                                     <th>Username</th>
-                                    <th>Jabatan</th>
                                     <th>Level</th>
                                     <th width="150px">Aksi</th>
                                 </tr>
@@ -27,7 +26,6 @@
                                 <tr class="odd gradeX">
                                         <td align="center"><?php echo $i ?></td>
                                         <td><?php echo $value->username ?></td>
-                                        <td><?php echo $value->user_jabatan ?></td>
                                         <td><?php echo $value->level ?></td>
                                         <td align="center"><a href="<?php echo site_url('pengguna/edit/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
                                         <button type="button" value="<?php echo $value->id ?>" class="btn btn-danger btn-xs confirm">

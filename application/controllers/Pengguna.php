@@ -29,7 +29,7 @@ class Pengguna extends CI_Controller {
 		$data=array('title'=>'Tambah Pengguna',
 					'isi'  =>'adminpages/pengguna/add'
 						);
-		$data['jabatan'] = $this->m_global->get_data_all('kehadiran', null);
+		$data['user'] = $this->m_global->get_data_all('user', null);
 
 		$this->load->view('adminlayout/wrapper',$data);	
 
@@ -55,20 +55,17 @@ class Pengguna extends CI_Controller {
 
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
-		$this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
 		$this->form_validation->set_rules('level', 'Level', 'trim|required');
 		
 		if ($this->form_validation->run() == true){
 			$menu_data 	= [
 						'username' 			=> $post['username'],
 						'password'			=> md5($post['password']),
-						'user_jabatan'			=> $post['jabatan'],
 						'level'				=> $post['level']
-						// 'created_by'		=> user_data()->id
 					  ];
-			$x = $this->m_global->get_data_all('user',null,['user_jabatan' => $menu_data['user_jabatan']]);
+			$x = $this->m_global->get_data_all('user',null,['username' => $menu_data['username']]);
 			if($x) {			
-					$result['msg'] = 'Jabatan sudah terisi !';
+					$result['msg'] = 'Username sudah digunakan !';
 					$result['sts'] = '0';
 				}
 				else{
@@ -99,20 +96,18 @@ class Pengguna extends CI_Controller {
 		$password = $post['password'];
 
 		$this->form_validation->set_rules('username', 'Username', 'trim|required');
-		$this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
 		$this->form_validation->set_rules('level', 'Level', 'trim|required');
 		
 		if ($this->form_validation->run() == true && $password == ''){
 			$menu_data 	= [
 						'username' 			=> $post['username'],
 						'password'			=> $password_lama[0]->password,
-						'user_jabatan'		=> $post['jabatan'],
 						'level'				=> $post['level']
 					  ];
-			$x = $this->m_global->get_data_all('user',null,['user_jabatan' => $menu_data['user_jabatan']]);
+			$x = $this->m_global->get_data_all('user',null,['username' => $menu_data['username']]);
 			if($x) {
 				if($x[0]->id !== $id) {
-					$result['msg'] = 'Jabatan sudah terisi !';
+					$result['msg'] = 'Username sudah digunakan !';
 					$result['sts'] = '0';
 				}
 				else{
@@ -145,13 +140,12 @@ class Pengguna extends CI_Controller {
 			$menu_data 	= [
 						'username' 			=> $post['username'],
 						'password' 			=> md5($password),
-						'user_jabatan'		=> $post['jabatan'],
 						'level'				=> $post['level']
 					  ];
-			$x = $this->m_global->get_data_all('user',null,['user_jabatan' => $menu_data['user_jabatan']]);
+			$x = $this->m_global->get_data_all('user',null,['username' => $menu_data['username']]);
 			if($x) {
 				if($x[0]->id !== $id) {
-					$result['msg'] = 'Jabatan sudah terisi !';
+					$result['msg'] = 'Username sudah digunakan!';
 					$result['sts'] = '0';
 				}
 				else{

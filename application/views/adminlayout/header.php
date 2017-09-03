@@ -5,7 +5,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="menu">Menu</span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin SIDESA</a>
+                <a class="navbar-brand" href="index.html">Admin SD LTT</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -33,11 +33,7 @@
                         </li>
                         
                         <li>
-                            <a class="white" href="<?php echo site_url('admin_pengaduan')?>"><i class="fa fa-eye fa-fw fcm"></i> Baca Pengaduan</a>
-                        </li>
-
-                        <li>
-                            <a class="white" href="<?php echo site_url('admin_pengajuan')?>"><i class="fa fa-list  fa-fw fcm"></i> List Pengajuan Surat</a>
+                            <a class="white" href="<?php echo site_url('admin_pengaduan')?>"><i class="fa fa-eye fa-fw fcm"></i> Baca Kritik Saran</a>
                         </li>
 
                         <li>
@@ -64,13 +60,13 @@
                             <a class="white" href="#"><i class="fa fa-cloud-upload fa-fw"></i> Perbarui Konten Umum<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a class="white" href="#"><i class="fa fa-user fa-fw"></i> Profil Desa <span class="fa arrow"></span></a>
+                                    <a class="white" href="#"><i class="fa fa-user fa-fw"></i> Profil Sekolah <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a class="white" href="<?php echo site_url('admin_jajaran_perangkat')?>">Jajaran Perangkat Desa</a>
+                                            <a class="white" href="<?php echo site_url('admin_struktur_organisasi')?>">Struktur Organisasi</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="<?php echo site_url('admin_sejarah')?>">Sejarah</a>
+                                            <a class="white" href="<?php echo site_url('admin_tenaga')?>">Tenaga Pendidik</a>
                                         </li>
                                         <li>
                                             <a class="white" href="<?php echo site_url('admin_visi_misi')?>">Visi & Misi</a>
@@ -80,19 +76,13 @@
                                 </li>
 
                                  <li>
-                                    <a class="white" href="#"><i class="fa fa-sitemap fa-fw"></i> Lembaga <span class="fa arrow"></span></a>
+                                    <a class="white" href="#"><i class="fa fa-sitemap fa-fw"></i> Kegiatan Siswa <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a class="white" href="<?php echo site_url('admin_bpd')?>">BPD</a>
+                                            <a class="white" href="<?php echo site_url('admin_bpd')?>">Galeri</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="<?php echo site_url('admin_lpmd')?>">LPMD</a>
-                                        </li>
-                                        <li>
-                                            <a class="white" href="<?php echo site_url('admin_pkk')?>">PKK</a>
-                                        </li>
-                                        <li>
-                                            <a class="white" href="<?php echo site_url('admin_karangtaruna')?>">Karangtaruna</a>
+                                            <a class="white" href="<?php echo site_url('admin_lpmd')?>">Video</a>
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->
@@ -105,11 +95,11 @@
                         </li>
 
                         <li>
-                            <a class="white" href="<?php echo site_url('Admin_Statistik') ?>"><i class="fa fa-pie-chart fa-fw fcm"></i> Perbarui Statistik Penduduk</a>
+                            <a class="white" href="<?php echo site_url('Admin_Statistik') ?>"><i class="fa fa-pie-chart fa-fw fcm"></i> Perbarui Statistik Siswa</a>
                         </li>
 
                         <li>
-                            <a class="white" href="<?php echo site_url('pengguna') ?>"><i class="fa fa-users fa-fw fcm"></i> Tambah Pengguna</a>
+                            <a class="white" href="<?php echo site_url('pengguna') ?>"><i class="fa fa-users fa-fw fcm"></i> Pengguna</a>
                         </li>
                        <!--  -->
                     </ul>

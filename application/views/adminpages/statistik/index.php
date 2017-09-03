@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                    <h3><strong>Panel Jenis Penduduk</strong></h3>
+                    <h3><strong>Panel Siswa</strong></h3>
                     </div>
                     <!-- /.panel-heading -->
                     <div class="panel-body">
@@ -20,7 +20,7 @@
                             </thead>
                             <tbody>
                             <?php $i = 1;
-                            foreach ($penduduk as $key => $value) { ?>
+                            foreach ($siswa as $key => $value) { ?>
                                 <tr class="odd gradeX">
                                         <td align="center"><?php echo $i ?></td>
                                         <td><?php echo $value->jk ?></td>
@@ -40,7 +40,7 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                    <h3><strong>Panel Pekerjaan Penduduk</strong></h3>
+                    <h3><strong>Panel Kelas</strong></h3>
                         <a href="<?php echo site_url('admin_statistik/add') ?>" class="btn btn-success"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Data</a>
                     </div>
                     <!-- /.panel-heading -->
@@ -49,19 +49,19 @@
                             <thead>
                                 <tr>
                                     <th width="50px">No</th>
-                                    <th>Pekerjaan</th>
+                                    <th>Kelas</th>
                                     <th>Jumlah</th>
                                     <th width="150px">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <?php $i = 1;
-                            foreach ($pekerjaan as $key => $value) { ?>
+                            foreach ($kelas as $key => $value) { ?>
                                 <tr class="odd gradeX">
                                         <td align="center"><?php echo $i ?></td>
-                                        <td><?php echo $value->nm_pk ?></td>
+                                        <td><?php echo $value->nm_kls ?></td>
                                         <td><?php echo $value->jml ?></td>
-                                        <td align="center"><a href="<?php echo site_url('Admin_Statistik/edit_pekerjaan/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
+                                        <td align="center"><a href="<?php echo site_url('Admin_Statistik/edit_kelas/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
                                         <button type="button" value="<?php echo $value->id ?>" class="btn btn-danger btn-xs confirm">
                                             <i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
                                         </button>

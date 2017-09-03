@@ -29,20 +29,6 @@
 						    	</div>
 						    </div>
 				        	<div class="col-lg-3">
-							    <label>Jabatan</label>
-						    </div>        	
-						    <div class="col-lg-9">
-								<div class="form-group input-group">
-							    	<span class="input-group-addon"><span class="fa fa-cubes"></span></span>
-							    	<select class="form-control" name="jabatan">
-							    		<option value="">- Pilih Jabatan -</option>
-                            			<?php foreach ($jabatan as $key => $value) { ?>
-							    		<option value="<?php echo $value->jabatan ?>"><?php echo $value->jabatan ?></option>
-                            			<?php } ?>
-							    	</select>
-						    	</div>
-						    </div>
-				        	<div class="col-lg-3">
 							    <label>Level</label>
 						    </div>        	
 						    <div class="col-lg-9">

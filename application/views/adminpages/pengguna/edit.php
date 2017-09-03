@@ -25,25 +25,7 @@
 						    <div class="col-lg-9">
 								<div class="form-group input-group">
 							    	<span class="input-group-addon"><span class="fa fa-lock">  </span></span>
-							        	<input type="password" name="password" class="form-control" placeholder="Password">
-						    	</div>
-						    </div>
-				        	<div class="col-lg-3">
-							    <label>Jabatan</label>
-						    </div>        	
-						    <div class="col-lg-9">
-								<div class="form-group input-group">
-							    	<span class="input-group-addon"><span class="fa fa-cubes"></span></span>
-							    	<select class="form-control" name="jabatan">
-							    		<option value="<?php echo $profil[0]->user_jabatan ?>"><?php echo $profil[0]->user_jabatan ?></option>
-							    		<option value="kepdes">Kepala Desa</option>
-							    		<option value="sekdes">Sekretaris Desa</option>
-							    		<option value="bendahara">Bendahara Desa</option>
-							    		<option value="kaur1">Kepala Urusan 1</option>
-							    		<option value="kaur2">Kepala Urusan 2</option>
-							    		<option value="kaur3">Kepala Urusan 3</option>
-							    		<option value="kaur4">Kepala Urusan 4</option>
-							    	</select>
+							        	<input type="password" name="password" class="form-control" placeholder="Biarkan kosong jika tidak ingin merubah">
 						    	</div>
 						    </div>
 				        	<div class="col-lg-3">
