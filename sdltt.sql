@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 03 Sep 2017 pada 16.21
+-- Generation Time: 15 Sep 2017 pada 03.32
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -70,7 +70,24 @@ CREATE TABLE IF NOT EXISTS `gvideo` (
   `id` int(11) NOT NULL,
   `judul` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `gvideo`
+--
+
+INSERT INTO `gvideo` (`id`, `judul`, `link`) VALUES
+(1, 'video 1', 'https://www.youtube-nocookie.com/embed/_X_sR8vfrjo'),
+(2, 'video 2', 'https://www.youtube-nocookie.com/embed/-5B6EwkWXxE'),
+(3, 'video 3', 'https://www.youtube-nocookie.com/embed/ctHIlOQr6jM'),
+(4, 'video 4', 'https://www.youtube-nocookie.com/embed/ma19gfUrZl0'),
+(5, 'video 5', 'https://www.youtube-nocookie.com/embed/VkctE1SSk_A'),
+(6, 'video 6', 'https://www.youtube.com/embed/LbN44FfAMIs'),
+(7, 'video 7', 'https://www.youtube.com/embed/XyQlFkUr5pw'),
+(8, 'video 8', 'https://www.youtube.com/embed/q_3d6lKdPtY'),
+(9, 'video 9', 'https://www.youtube.com/embed/Xp4-WecU3Po'),
+(10, 'video 10', 'https://www.youtube.com/embed/8V1D23xEZTo'),
+(11, 'video 11', 'https://www.youtube.com/embed/hGiA9ITTPlU');
 
 -- --------------------------------------------------------
 
@@ -130,7 +147,41 @@ CREATE TABLE IF NOT EXISTS `kritik` (
   `alamat` varchar(255) NOT NULL,
   `kritik` varchar(255) NOT NULL,
   `status` enum('1','2') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `kritik`
+--
+
+INSERT INTO `kritik` (`id`, `nama`, `alamat`, `kritik`, `status`) VALUES
+(1, 'ilham', 'Malang', 'test kritik', '2'),
+(2, 'arif', 'Malang', 'test kritik', '1'),
+(3, 'oieruwoi', 'oiewurowuqoiu', 'oeiwurowuoiw', '1'),
+(4, 'sooafd', 'soduoaiduoa', 'saaiudyiuaydui', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pendidik`
+--
+
+CREATE TABLE IF NOT EXISTS `pendidik` (
+  `id` int(11) NOT NULL,
+  `kode` varchar(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `jk` varchar(255) NOT NULL,
+  `jabatan` varchar(255) NOT NULL,
+  `foto` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `pendidik`
+--
+
+INSERT INTO `pendidik` (`id`, `kode`, `nama`, `jk`, `jabatan`, `foto`) VALUES
+(3, 'G003', 'Andre', 'Laki-laki', 'Guru Kelas', 'file_1504833591.JPG'),
+(9, 'ertyuiop', 'rtyuiop[', 'tyuiop[', 'tyuiop', 'file_1504834972.jpg'),
+(10, 'riquyrui', 'wwqueoqueo', 'eoieuoqieu', 'sueoiqueio', 'file_1504834988.jpg');
 
 -- --------------------------------------------------------
 
@@ -259,6 +310,12 @@ ALTER TABLE `kritik`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pendidik`
+--
+ALTER TABLE `pendidik`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `siswa`
 --
 ALTER TABLE `siswa`
@@ -300,7 +357,7 @@ ALTER TABLE `gimage`
 -- AUTO_INCREMENT for table `gvideo`
 --
 ALTER TABLE `gvideo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `kelas`
 --
@@ -315,7 +372,12 @@ ALTER TABLE `konten`
 -- AUTO_INCREMENT for table `kritik`
 --
 ALTER TABLE `kritik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `pendidik`
+--
+ALTER TABLE `pendidik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `siswa`
 --

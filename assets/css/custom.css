@@ -3,7 +3,7 @@
       padding-left: 100px;
     }
     footer {
-      background-color: #2C8096;
+      background-color: #248f24;
       padding: 10px;
     }
 	   
@@ -53,7 +53,7 @@
     }
 
     nav.navbar.navbar-fixed-top {
-      background-color: #2C8096;
+      background-color: #248f24;
     }
     .nav>li>a:hover {
     background-color: #D4E5EA;
@@ -84,7 +84,7 @@
         display: block;
         overflow: hidden;
         opacity: 0;
-        background-color: #2C8096 ;
+        background-color:  #248f24 ;
     }
 
     .dropdown.open .dropdown-menu {
@@ -97,7 +97,7 @@
     }
 
     .fcm:hover {
-      color: #2C8096;
+      color: #78BD3B;
     }
 
     .white{

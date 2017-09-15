@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Lapor extends CI_Controller {
+class Kritik extends CI_Controller {
 	
 	function __construct()
 	{
@@ -16,28 +16,25 @@ class Lapor extends CI_Controller {
 	}
 
 	
-	 public function laporkan(){
-                $gbr = $this->upload->data();
-                $data = array(
-                  'nm_gbr' =>$gbr['file_name'],
-                  'tipe_gbr' =>$gbr['file_type'],
-                  'nik' =>$this->input->post('nik'),
-                  'nama'=>$this->input->post('nama'),
-                  'alamat'=>$this->input->post('alamat'),
-                  'keterangan'=>$this->input->post('keterangan'),
-                  'status' => '1',
-                  
-                );
+public function ajukan(){
+      $data = array(
+        'nama'=>$this->input->post('nama'),
+        'alamat'=>$this->input->post('alamat'),
+        'kritik'=>$this->input->post('kritik'),
+        'status' => '1'
+        
+      );
 
-                $this->m_global->insert('lapor',$data); //akses model untuk menyimpan ke database
-                //pesan yang muncul jika berhasil diupload pada session flashdata
-                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success fade in\" id=\"alert\">Laporan Berhasil Dikirim !!</div></div>");
-                redirect('lapor'); //jika berhasil maka akan ditampilkan view vupload
-            }else{
-                //pesan yang muncul jika terdapat error dimasukkan pada session flashdata
-                $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Laporan Gagal Dikirim !!</div></div>");
-                redirect('lapor'); //jika gagal maka akan ditampilkan form upload
-            }
+      $ket = $this->m_global->insert('kritik',$data); //akses model untuk menyimpan ke database
+      if ($ket) {
+            //pesan yang muncul jika berhasil diupload pada session flashdata
+            $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success fade in\" id=\"alert\">Kritik & saran Berhasil Dikirim !!</div></div>");
+            redirect('kritik'); //jika berhasil maka akan ditampilkan view vupload
         }
-    }
+      else{
+            //pesan yang muncul jika terdapat error dimasukkan pada session flashdata
+            $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Kritik & saran Gagal Dikirim !!</div></div>");
+            redirect('kritik'); //jika gagal maka akan ditampilkan form upload
+        }
+      }
 }

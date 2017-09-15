@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Admin_pengaduan extends CI_Controller {
+class Admin_kritik extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
@@ -12,9 +12,9 @@ class Admin_pengaduan extends CI_Controller {
       	$this->SecurityModel->level_admin();
 
 		$data=array('title'=>'Home',
-					'isi'  =>'adminpages/pengaduan/index'
+					'isi'  =>'adminpages/kritik/index'
 						);
-		$data['pengaduan'] = $this->m_global->get_data_all('lapor', null);
+		$data['kritik'] = $this->m_global->get_data_all('kritik', null);
 		$this->load->view('adminlayout/wrapper',$data);	
 	}
 
@@ -23,7 +23,7 @@ class Admin_pengaduan extends CI_Controller {
 		$data   = array(
 			'status' => $baca,
 			);
-		$this->m_global->update('lapor',$data,['id'=>$id]);
-		redirect('admin_pengaduan');	
+		$this->m_global->update('kritik',$data,['id'=>$id]);
+		redirect('admin_kritik');	
 	}
 }

@@ -3,12 +3,12 @@
 }
 
 .menu:hover {
-    color: #000;
+    color: #248f24;
 }
 
 .navbar-default {
-    background-color: #2C8096;
-    border-color: #bef3ff;
+    background-color: #248f24;
+    border-color: #85e085;
 }
 
 .navbar-default .navbar-brand {
@@ -26,10 +26,10 @@
 
 #wrapper {
     width: 100%;
-    background-color: #277387;
+    background-color: #248f24;
 }
 
 .sidebar ul li a.active {
     background-color: #eeeeee;
-    color: #2C8096;
+    color: #248f24;
 }

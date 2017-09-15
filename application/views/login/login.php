@@ -31,19 +31,19 @@
     <![endif]-->
     <style>
         .panel-default {
-            border-color: #2C8096;
+            border-color: #248f24;
         }
 
         .panel-default>.panel-heading {
             color: #fff;
-            background-color: #2C8096;
-            border-color: #2C8096;
+            background-color: #248f24;
+            border-color: #248f24;
         }
 
         .btn-login {
             color: #fff;
-            background-color: #2C8096;
-            border-color: #2C8096;
+            background-color: #248f24;
+            border-color: #248f24;
         }
     </style>
 </head>
@@ -57,7 +57,7 @@
                     <div class="panel-heading">
                     <center><img src="<?php echo base_url(); ?>img/logo-desa.png" alt="Image" align="middle"></center>
                     <br>
-                    <h3 class="panel-title text-center">Silakan Login</h3>
+                    <!-- <h3 class="panel-title text-center">Silakan Login</h3> -->
                     </div>
                     <div class="panel-body">
                         <form role="form" action="<?php echo base_url('login/masuk');?>" method="post">

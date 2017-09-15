@@ -1,5 +1,5 @@
 <footer class="container-fluid text-center">
-  <p class="white">&copy Web Desa.com</p>
+  <p class="white">&copy sdltt.com</p>
 </footer>
 
 </body>

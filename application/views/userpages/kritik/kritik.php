@@ -2,27 +2,20 @@
   <div class="container">
   	<div class="container-fluid">
     <div class="row">
-    <center><h2>Lapor</h2></center>
+    <center><h2>Kritik dan Saran</h2></center>
     <hr>
     <br>
     	<br>
     	<div class="row">
     	 
     	</div>
-    	<form class="form-horizontal" action="<?=base_url()?>lapor/laporkan" method="post" enctype="multipart/form-data">
+    	<form class="form-horizontal" action="<?=base_url()?>kritik/ajukan" method="post" enctype="multipart/form-data">
 			<fieldset>
 				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-5">
 					<center><?=$this->session->flashdata('pesan');?></center>
 				</div>
-				</div>
-				<!-- Text input-->
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="nik">NIK : </label>
-				  		<div class="col-md-5">
-				  			<input id="nik" name="nik" type="text" placeholder="Masukkan NIK" class="form-control input-md" required="">
-				 		</div>
 				</div>
 
 				<!-- Text input-->
@@ -43,24 +36,17 @@
 
 				<!-- Text input-->
 				<div class="form-group">
-				  	<label class="col-md-4 control-label" for="keterangan">Keterangan : </label>  
+				  	<label class="col-md-4 control-label" for="keterangan">Kritik : </label>  
 				  		<div class="col-md-5">
-				  			<input id="keterangan" name="keterangan" type="text" placeholder="Masukkan kronologi kejadian" class="form-control input-md" required="">
+				  			 <textarea class="form-control" id="textarea" name="kritik" required="">Masukkan kritik & saran</textarea>
+				  			<!-- <input id="kritik" name="kritik" type="text" placeholder="Masukkan kritik & saran" class="form-control input-md" required=""> -->
 				    	</div>
-				</div>
-
-				<!-- File Button --> 
-				<div class="form-group">
-					<label class="col-md-4 control-label" for="foto">Foto : </label>
-				  		<div class="col-md-4">
-				    		<input id="foto" name="img" class="input-file" type="file">
-				  		</div>
 				</div>
 
 				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-5">
-						<input type="submit" id="os" class="btn btn-primary" value="laporkan"></input>
+						<input type="submit" id="os" class="btn btn-primary" value="Kirim"></input>
 					</div>
 				</div>
 			</fieldset>

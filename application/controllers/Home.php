@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 		$this->load->helper('tglindo_helper');
 	}
 	public function index() {
-		$data=array('title'=>'Web Desa.id',
+		$data=array('title'=>'SD Lestari Tani Teladan',
 					'isi'  =>'userpages/home/homeuser'
 						);
 		//$data['hadir']=$this->m_global->get_data_all('kehadiran');

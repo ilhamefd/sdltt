@@ -33,7 +33,7 @@
                         </li>
                         
                         <li>
-                            <a class="white" href="<?php echo site_url('admin_pengaduan')?>"><i class="fa fa-eye fa-fw fcm"></i> Baca Kritik Saran</a>
+                            <a class="white" href="<?php echo site_url('admin_kritik')?>"><i class="fa fa-eye fa-fw fcm"></i> Baca Kritik Saran</a>
                         </li>
 
                         <li>
@@ -82,7 +82,7 @@
                                             <a class="white" href="<?php echo site_url('admin_bpd')?>">Galeri</a>
                                         </li>
                                         <li>
-                                            <a class="white" href="<?php echo site_url('admin_lpmd')?>">Video</a>
+                                            <a class="white" href="<?php echo site_url('admin_kegiatan_video')?>">Video</a>
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->
