@@ -13,6 +13,7 @@ class Home extends CI_Controller {
 		//$data['hadir']=$this->m_global->get_data_all('kehadiran');
 		$data['slide']=$this->m_global->get_data_all('slide_image');
 		$data['video']=$this->m_global->get_data_all('video');
+		$data['record'] = $this->m_global->get_data_all('gvideo', NULL, NULL, '*', NULL,['id', 'desc']);
 		$data['berita']=$this->m_global->get_data_all('berita', NULL, NULL, '*', NULL,['id', 'desc'],'0','4');
 
 		$this->load->view('userlayout/wrapper',$data);

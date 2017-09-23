@@ -60,55 +60,54 @@
     <br>
   </div>
 <!--  -->
+  <div class="col-sm-4">
+          <iframe src="<?=$record[0]->link; ?>" allowfullscreen></iframe>
+          <a href="<?php echo site_url('vgaleri/watch/'.$record[0]->id.'') ?>"><h4><?php echo $record[0]->judul?></h4></a>
+      </div>
+
+      <div class="col-sm-4">
+        <iframe src="<?=$record[1]->link; ?>" allowfullscreen></iframe>
+          <a href="<?php echo site_url('vgaleri/watch/'.$record[1]->id.'') ?>"><h4><?php echo $record[1]->judul?></h4></a>
+          <div class="pull-left">
+            <a href="<?php echo site_url('vgaleri')?>"><button type="button" class="btn btn-success">Video Lainnya...</button></a>
+          </div>
+      </div>
+
   </div>
 </div>
-<hr>
+
 </div>
 </div>
 <!-- ukuran gambar 150*80px -->
-<div class="container text-center">    
+<div class="container text-center">
+<hr>
+<hr>    
   <h3>Berita Terbaru</h3>
+
+
   <br>
   <div class="row">
 
      <?php foreach ($berita as $key => $value) { ?>
           <div class="col-sm-3">
-              <a href="<?php echo site_url('semua_berita/detail/'.$value->id.'') ?>"><center><img src="<?php echo base_url(); ?>assets/berita/<?php echo $value->gambar?>" class="img-responsive" width="150px" alt="Image"></center>
+              <a href="<?php echo site_url('semua_berita/detail/'.$value->id.'') ?>"><center><img src="<?php echo base_url(); ?>assets/berita/<?php echo $value->gambar?>" class="img-responsive" width="320px" alt="Image"></center>
               <p><?php echo $value->judul?></p></a>
           </div>  
           <?php } ?>
-
-    <!-- <div class="col-sm-3">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Berita 1</p>
-    </div>
-    <div class="col-sm-3"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Berita 2</p>    
-    </div>
-    <div class="col-sm-3"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Berita 3</p>    
-    </div>
-    <div class="col-sm-3"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Berita 4</p>    
-    </div> -->
   </div>
-  <div class="pull-right">
-    <a href="<?php echo site_url('Semua_berita/index')?>"><h4><u>Lihat Semua Berita....</u></h4></a>
-  </div>
+  
+    <center><a href="<?php echo site_url('Semua_berita/index')?>"><button type="button" class="btn btn-success">Lihat Semua Berita...</button></a></center>
   <br>
-  <hr>
 </div>
 
-<div class="container text-center">    
+<div class="container text-center">
+  <hr>    
   <h3>Informasi</h3>
   <br>
   <div class="row">
     <div class="col-sm-4">
       <iframe src="<?=$video[0]->link; ?>" height="190px" allowfullscreen></iframe>
-      <p>Video Bumper</p>
+      <p>Video Profile</p>
     </div>
     <div class="col-sm-4" id="map"> 
       <iframe
@@ -125,10 +124,10 @@
       <p>Live Streaming</p>
     </div>
   </div>
-  <hr>
 </div>
 
-<div class="container text-center">    
+<div class="container text-center">
+  <hr>    
   <h3>Dinas Terkait</h3>
   <br>
   <div class="row">

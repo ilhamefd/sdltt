@@ -16,8 +16,8 @@ class Admin_kegiatan_video extends CI_Controller {
 					'isi'  =>'adminpages/kegiatan/video/index'
 					);
 
-		$data['record']	= $this->m_global->get_data_all('gvideo', null, null);
-		
+		//$data['record']	= $this->m_global->get_data_all('gvideo', null, null);
+		$data['record']=$this->m_global->get_data_all('gvideo', NULL, NULL, '*', NULL,['id', 'desc']);
 		$this->load->view('adminlayout/wrapper', $data);
 	}
 
@@ -36,7 +36,8 @@ class Admin_kegiatan_video extends CI_Controller {
 	public function action_add(){
         $data = array(
            'judul' =>$this->input->post('judul'),
-           'link' =>$this->input->post('link')
+           'link' =>$this->input->post('link'),
+           'deskripsi' =>$this->input->post('deskripsi')
         );
                 
         $edt=$this->m_global->insert('gvideo',$data); //akses model untuk menyimpan ke database
@@ -67,7 +68,8 @@ class Admin_kegiatan_video extends CI_Controller {
 	public function action_edit($id){
         $data = array(
            'judul' =>$this->input->post('judul'),
-           'link' =>$this->input->post('link')
+           'link' =>$this->input->post('link'),
+           'deskripsi' =>$this->input->post('deskripsi')
         );
                 
         $edt=$this->m_global->update('gvideo',$data,['id'=>$id]); //akses model untuk menyimpan ke database

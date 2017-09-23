@@ -38,7 +38,7 @@
 				<div class="form-group">
 				  	<label class="col-md-4 control-label" for="keterangan">Kritik : </label>  
 				  		<div class="col-md-5">
-				  			 <textarea class="form-control" id="textarea" name="kritik" required="">Masukkan kritik & saran</textarea>
+				  			 <textarea class="form-control" id="textarea" name="kritik" required="" placeholder="Masukkan kritik & saran"></textarea>
 				  			<!-- <input id="kritik" name="kritik" type="text" placeholder="Masukkan kritik & saran" class="form-control input-md" required=""> -->
 				    	</div>
 				</div>

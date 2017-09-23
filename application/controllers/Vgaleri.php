@@ -10,5 +10,17 @@ class Vgaleri extends CI_Controller {
 		$data['record']=$this->m_global->get_data_all('gvideo', NULL, NULL, '*', NULL,['id', 'desc']);
 		$this->load->view('userlayout/wrapper',$data);	
 	}
+
+	public function watch($id){
+		$data=array('title'=>'Detail Surat Permohonan',
+					'isi'  =>'userpages/gvideo/watch'
+						);		
+		$data['record'] = $this->m_global->get_data_all('gvideo', NULL, NULL, '*', NULL,['id', 'desc']);
+		$data['watch']=$this->m_global->get_data_all('gvideo',null,['id'=>$id]);
+		
+		
+		$this->load->view('userlayout/wrapper',$data);	
+
+	}
 	
 }

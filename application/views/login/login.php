@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" href="<?php echo base_url(); ?>img/tico.png">
-    <title>Login SIDESA</title>
+    <title>Login SD PT. Lestari Tani Teladan</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

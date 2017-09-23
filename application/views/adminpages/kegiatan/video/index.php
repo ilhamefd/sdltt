@@ -17,7 +17,7 @@
                                             <th><center>No.</center></th>
                                             <th><center>Video</center></th>
                                             <th><center>Judul</center></th>
-                                            <th><center>Link</center></th>
+                                            <th><center>Deskripsi</center></th>
                                             <th><center>Aksi</center></th>
                                         </tr>
                                     </thead>
@@ -28,11 +28,13 @@
                                               <td><?php echo $i ?></td> 
                                               <td class="col-md-4"><iframe src="<?=$value->link; ?>" height="190px" allowfullscreen></iframe></td>
                                               <td class="col-md-3"><?php echo $value->judul ?></td>
-                                              <td class="col-md-3"><?php echo $value->link ?></td>
+                                              <td class="col-md-3"><?php echo $value->deskripsi ?></td>
                                               <td class="col-md-2">
-                                                <center><button type="button" value="<?php echo $value->id ?>" class="btn btn-danger btn-xs confirm">
-                                                <i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
-                                                </button></center>
+                                                <center>
+                                                    <a href="<?php echo site_url('admin_kegiatan_video/show_edit/'.$value->id.'') ?>"><span class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit </span></a> 
+                                                    <button type="button" value="<?php echo $value->id ?>" class="btn btn-danger btn-xs confirm"><i class="fa fa-trash" aria-hidden="true"></i> Delete </span>
+                                                    </button>
+                                                </center>
                                               </td>
                                             </tr>    
                                         <?php $i++;
