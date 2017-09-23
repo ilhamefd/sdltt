@@ -12,8 +12,12 @@
       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.min.css">
       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css">
       <link rel="stylesheet" href="<?php echo base_url(); ?>assets/sweet-alert/css/sweetalert2.min.css">
-      <script src="<?php echo base_url(); ?>assets/sweet-alert/js/sweetalert2.min.js"></script>
+      <link rel="stylesheet" href="<?php echo base_url(); ?>assets/prettyPhoto/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+      <!-- <link rel="stylesheet" href="<?php echo base_url(); ?>assets/prettyPhoto/prettyPhoto.css"> -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="<?php echo base_url(); ?>assets/sweet-alert/js/sweetalert2.min.js"></script>
+      <script src="<?php echo base_url(); ?>assets/prettyPhoto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 

@@ -79,7 +79,7 @@
                                     <a class="white" href="#"><i class="fa fa-sitemap fa-fw"></i> Kegiatan Siswa <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         <li>
-                                            <a class="white" href="<?php echo site_url('admin_bpd')?>">Galeri</a>
+                                            <a class="white" href="<?php echo site_url('admin_galeri')?>">Galeri</a>
                                         </li>
                                         <li>
                                             <a class="white" href="<?php echo site_url('admin_kegiatan_video')?>">Video</a>
