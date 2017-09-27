@@ -12,7 +12,7 @@
                                     <div class="col-md-7">
                                         <input name="streaming" type="text" value="<?=$record[0]->link; ?>" placeholder="Masukkan link Streaming" class="form-control input-md">
                                         <br>
-                                        <input type="submit" class="btn btn-primary btn-xm" value="Simpan"></input>
+                                        <input type="submit" class="btn btn-success btn-xm" value="Simpan"></input>
                                     </div> 
                             </div>
                         </form>

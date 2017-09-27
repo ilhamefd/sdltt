@@ -5,7 +5,8 @@ class Kritik extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->helper(array('form', 'url'));
+    $this->load->helper(array('form', 'url'));
+    $this->load->library(array('form_validation', 'Recaptcha'));
 	}
 
 	public function index() {
@@ -21,12 +22,14 @@ public function ajukan(){
         'nama'=>$this->input->post('nama'),
         'alamat'=>$this->input->post('alamat'),
         'kritik'=>$this->input->post('kritik'),
-        'status' => '1'
-        
+        'status' => '1',
       );
-
-      $ket = $this->m_global->insert('kritik',$data); //akses model untuk menyimpan ke database
-      if ($ket) {
+            
+      $captcha_answer = $this->input->post('g-recaptcha-response');
+      $response = $this->recaptcha->verifyResponse($captcha_answer);
+      
+      if ($response['success']) {
+            $ket = $this->m_global->insert('kritik',$data); //akses model untuk menyimpan ke database
             //pesan yang muncul jika berhasil diupload pada session flashdata
             $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success fade in\" id=\"alert\">Kritik & saran Berhasil Dikirim !!</div></div>");
             redirect('kritik'); //jika berhasil maka akan ditampilkan view vupload

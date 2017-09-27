@@ -44,12 +44,21 @@
 				</div>
 
 				<div class="form-group">
+					<label class="col-md-4"> </label>  
+					<div class="col-md-5">			
+					<div class="g-recaptcha" name="" data-sitekey="6LfD1zEUAAAAADtlHC7aWhH70Vt3vno43_oK_hrh">
+					</div>
+					</div>
+            	</div>
+
+				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 					<div class="col-md-5">
-						<input type="submit" id="os" class="btn btn-primary" value="Kirim"></input>
+						<input type="submit" id="os" class="btn btn-success" value="Kirim"></input>
 					</div>
 				</div>
 			</fieldset>
+			
 	</form>
 		</div>
 		<br>

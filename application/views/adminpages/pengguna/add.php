@@ -37,7 +37,7 @@
 							    	<select class="form-control" name="level">
 							    		<option value="">- Pilih Level -</option>
 							    		<option value="admin">Admin</option>
-							    		<option value="user">User</option>
+							    		<option value="siswa">Siswa</option>
 							    	</select>
 						    	</div>
 						    </div>

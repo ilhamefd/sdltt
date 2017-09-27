@@ -19,6 +19,7 @@
       <script src="<?php echo base_url(); ?>assets/sweet-alert/js/sweetalert2.min.js"></script>
       <script src="<?php echo base_url(); ?>assets/prettyPhoto/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
   <body>

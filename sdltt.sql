@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 15 Sep 2017 pada 03.32
+-- Generation Time: 26 Sep 2017 pada 06.40
 -- Versi Server: 5.6.26
 -- PHP Version: 5.6.12
 
@@ -57,8 +57,19 @@ CREATE TABLE IF NOT EXISTS `gimage` (
   `id` int(11) NOT NULL,
   `judul` varchar(255) NOT NULL,
   `deskripsi` varchar(255) NOT NULL,
-  `img` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `img` varchar(255) NOT NULL,
+  `tanggal` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data untuk tabel `gimage`
+--
+
+INSERT INTO `gimage` (`id`, `judul`, `deskripsi`, `img`, `tanggal`) VALUES
+(1, 'Test 1', 'Test Foto 1', 'file_1506400163.jpg', 'Selasa, 26 September 2017, 11:30'),
+(2, 'Test 2', 'Test Foto 2', 'file_1506400180.jpg', 'Selasa, 26 September 2017, 11:29'),
+(3, 'Test Foto 3', 'Test Foto 3', 'file_1506400228.jpg', 'Selasa, 26 September 2017, 11:30'),
+(4, 'Test Foto 4', 'Test Foto 4', 'file_1506400244.jpg', 'Selasa, 26 September 2017, 11:30');
 
 -- --------------------------------------------------------
 
@@ -69,25 +80,26 @@ CREATE TABLE IF NOT EXISTS `gimage` (
 CREATE TABLE IF NOT EXISTS `gvideo` (
   `id` int(11) NOT NULL,
   `judul` varchar(255) NOT NULL,
-  `link` varchar(255) NOT NULL
+  `link` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data untuk tabel `gvideo`
 --
 
-INSERT INTO `gvideo` (`id`, `judul`, `link`) VALUES
-(1, 'video 1', 'https://www.youtube-nocookie.com/embed/_X_sR8vfrjo'),
-(2, 'video 2', 'https://www.youtube-nocookie.com/embed/-5B6EwkWXxE'),
-(3, 'video 3', 'https://www.youtube-nocookie.com/embed/ctHIlOQr6jM'),
-(4, 'video 4', 'https://www.youtube-nocookie.com/embed/ma19gfUrZl0'),
-(5, 'video 5', 'https://www.youtube-nocookie.com/embed/VkctE1SSk_A'),
-(6, 'video 6', 'https://www.youtube.com/embed/LbN44FfAMIs'),
-(7, 'video 7', 'https://www.youtube.com/embed/XyQlFkUr5pw'),
-(8, 'video 8', 'https://www.youtube.com/embed/q_3d6lKdPtY'),
-(9, 'video 9', 'https://www.youtube.com/embed/Xp4-WecU3Po'),
-(10, 'video 10', 'https://www.youtube.com/embed/8V1D23xEZTo'),
-(11, 'video 11', 'https://www.youtube.com/embed/hGiA9ITTPlU');
+INSERT INTO `gvideo` (`id`, `judul`, `link`, `deskripsi`) VALUES
+(1, 'video 1', 'https://www.youtube-nocookie.com/embed/_X_sR8vfrjo', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(2, 'video 2', 'https://www.youtube-nocookie.com/embed/-5B6EwkWXxE', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(3, 'video 3', 'https://www.youtube-nocookie.com/embed/ctHIlOQr6jM', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(4, 'video 4', 'https://www.youtube-nocookie.com/embed/ma19gfUrZl0', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(5, 'video 5', 'https://www.youtube-nocookie.com/embed/VkctE1SSk_A', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(6, 'video 6', 'https://www.youtube.com/embed/LbN44FfAMIs', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(7, 'video 7', 'https://www.youtube.com/embed/XyQlFkUr5pw', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(8, 'video 8', 'https://www.youtube.com/embed/q_3d6lKdPtY', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(9, 'video 9', 'https://www.youtube.com/embed/Xp4-WecU3Po', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(10, 'video 10', 'https://www.youtube.com/embed/8V1D23xEZTo', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.'),
+(11, 'video 11', 'https://www.youtube.com/embed/hGiA9ITTPlU', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun.');
 
 -- --------------------------------------------------------
 
@@ -147,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `kritik` (
   `alamat` varchar(255) NOT NULL,
   `kritik` varchar(255) NOT NULL,
   `status` enum('1','2') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data untuk tabel `kritik`
@@ -157,7 +169,10 @@ INSERT INTO `kritik` (`id`, `nama`, `alamat`, `kritik`, `status`) VALUES
 (1, 'ilham', 'Malang', 'test kritik', '2'),
 (2, 'arif', 'Malang', 'test kritik', '1'),
 (3, 'oieruwoi', 'oiewurowuqoiu', 'oeiwurowuoiw', '1'),
-(4, 'sooafd', 'soduoaiduoa', 'saaiudyiuaydui', '1');
+(4, 'sooafd', 'soduoaiduoa', 'saaiudyiuaydui', '1'),
+(5, 'ertyuio', 'ertyuio', 'ertyuiop', '2'),
+(6, '12345678', '12345678', '12345678', '1'),
+(7, 'wertyuiop', 'rtyuiop[', 'rtyuiop[]', '1');
 
 -- --------------------------------------------------------
 
@@ -266,7 +281,7 @@ CREATE TABLE IF NOT EXISTS `video` (
 --
 
 INSERT INTO `video` (`id`, `jenis`, `link`) VALUES
-(1, 'video', 'https://www.youtube.com/embed/fvBdql8swZA'),
+(1, 'video', 'https://www.youtube.com/embed/8iGrAmLq0d4'),
 (2, 'streaming', 'https://www.youtube.com/embed/sBikujSDWj0');
 
 --
@@ -352,7 +367,7 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT for table `gimage`
 --
 ALTER TABLE `gimage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `gvideo`
 --
@@ -372,7 +387,7 @@ ALTER TABLE `konten`
 -- AUTO_INCREMENT for table `kritik`
 --
 ALTER TABLE `kritik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `pendidik`
 --

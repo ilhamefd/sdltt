@@ -4,7 +4,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">Tambah Video Kegiatan Siswa</h1>
-                         <form class="form-horizontal" action="<?=base_url()?>admin_kegiatan_video/action_add" method="post" enctype="multipart/form-data">
+                         <form class="form-horizontal" action="<?=base_url()?>siswa_kegiatan_video/action_add" method="post" enctype="multipart/form-data">
                     <fieldset>
                         <div class="form-group">
                             <label class="col-md-4 control-label"></label>

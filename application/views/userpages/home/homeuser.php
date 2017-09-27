@@ -90,8 +90,12 @@
 
      <?php foreach ($berita as $key => $value) { ?>
           <div class="col-sm-3">
-              <a href="<?php echo site_url('semua_berita/detail/'.$value->id.'') ?>"><center><img src="<?php echo base_url(); ?>assets/berita/<?php echo $value->gambar?>" class="img-responsive" width="320px" alt="Image"></center>
+              <div class="thumbnail">
+              <a href="<?php echo site_url('semua_berita/detail/'.$value->id.'') ?>"><center><img class="img-thumbnail" src="<?php echo base_url(); ?>assets/berita/<?php echo $value->gambar?>" class="img-responsive" width="320px" alt="Image"></center>
+              <div class="caption">
               <p><?php echo $value->judul?></p></a>
+            </div>
+          </div>
           </div>  
           <?php } ?>
   </div>
@@ -114,7 +118,7 @@
   width="auto"
   height="193px"
   frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDrGi9kLBkNu-wd9rLsNDcL-EGcI_jts14&q=Swalayan BUDI 1, Bendorejo,Pogalan,Kabupaten+Trenggalek,Jawa+Timur+66371" height="190px" allowfullscreen>
+  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3988.701769295884!2d119.45755068172048!3d-1.3555342347717962!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8c5fabb5485ab5%3A0x58df8986d43982a3!2sPT.LESTARI+TANI+TELADAN!5e0!3m2!1sen!2s!4v1506167482913" height="190px" allowfullscreen>
 </iframe>
       <p>Peta Lokasi</p>    
     </div>
@@ -131,29 +135,29 @@
   <h3>Dinas Terkait</h3>
   <br>
   <div class="row">
+    <div class="col-sm-12">
+      <div class="col-sm-2">
+
+      </div>
     <div class="col-sm-2">
-      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
-      <p>Dinas 1</p>
+      <a href="https://kemdikbud.go.id/"><center><img src="<?php echo base_url(); ?>img/dikbud.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
+      <p>Kementerian Pendidikan dan Kebudayaan</p>
     </div>
     <div class="col-sm-2"> 
-      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
-      <p>Dinas 2</p>    
+      <a href="https://disdikbud.sultengprov.go.id/"><center><img src="<?php echo base_url(); ?>img/sulteng.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
+      <p>Dinas Pendidikan dan Kebudayaan Sulawesi Tengah</p>    
     </div>
     <div class="col-sm-2"> 
-      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
-      <p>Dinas 3</p>
+      <a href="http://donggala.siap.web.id/"><center><img src="<?php echo base_url(); ?>img/donggala.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
+      <p>Dinas Pendidikan dan Kebudayaan Kabupaten Donggala</p>
     </div>
     <div class="col-sm-2"> 
-      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
-      <p>Dinas 4</p>
+      <a href="http://www.astra-agro.co.id/"><center><img src="<?php echo base_url(); ?>img/astraagro.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
+      <p>PT. Astra Agro Lestari, Tbk</p>
     </div> 
-    <div class="col-sm-2"> 
-      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
-      <p>Dinas 5</p>
-    </div>     
-    <div class="col-sm-2"> 
-      <a href="http://www.jatimprov.go.id/"><center><img src="<?php echo base_url(); ?>img/propinsi.png?>" class="img-responsive" style="width:50%" alt="Image"></center></a>
-      <p>Dinas 6</p>
-    </div> 
+    <div class="col-sm-2">
+
+    </div>
   </div>
+</div>
 </div>

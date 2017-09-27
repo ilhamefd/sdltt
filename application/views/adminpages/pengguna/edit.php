@@ -37,7 +37,7 @@
 							    	<select class="form-control" name="level">
 							    		<option value="<?php echo $profil[0]->level ?>"><?php echo $profil[0]->level ?></option>
 							    		<option value="admin">Admin</option>
-							    		<option value="user">User</option>
+							    		<option value="siswa">Siswa</option>
 							    	</select>
 						    	</div>
 						    </div>

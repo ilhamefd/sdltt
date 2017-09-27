@@ -12,7 +12,7 @@
                                       <!--   <input name="isi" type="text" value="<?=$record[0]->isi; ?>" placeholder="Masukkan isi" class="form-control input-md"> -->
                                         <textarea class="ckeditor" name="isi" id="ckeditor" value=""><?=$record[0]->isi; ?></textarea>
                                         <br>
-                                        <input type="submit" class="btn btn-primary btn-xm" value="Simpan"></input>
+                                        <input type="submit" class="btn btn-success btn-xm" value="Simpan"></input>
                                     </div> 
                             </div>
                         </form>

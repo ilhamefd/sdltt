@@ -39,7 +39,7 @@
                                         
                                         <br><br>
                                         <button type="button" class="btn btn-warning" onclick="window.history.go(-1); return false;">Kembali</button>
-                                        <button type="submit" class="btn btn-primary btn-xm" value="Simpan">Simpan</button>
+                                        <button type="submit" class="btn btn-success btn-xm" value="Simpan">Simpan</button>
                                     </div> 
                             </div>
                         </form>

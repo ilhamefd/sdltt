@@ -14,7 +14,6 @@ Class M_login extends CI_Model {
 				$sess = array('id' => $row->id,
 							'username' => $row->username,
 							'password' => $row->password,
-							'jabatan' => $row->user_jabatan,
 							'level' => $row->level
 							);
 				
@@ -25,7 +24,7 @@ Class M_login extends CI_Model {
 				}
 				else
 				{
-					redirect('user');
+					redirect('siswa_home');
 				}
 			}
 		}

@@ -56,7 +56,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label"></label>
                             <div class="col-md-5">
-                                <input type="submit" id="os" class="btn btn-primary" value="Tambahkan"></input>
+                                <input type="submit" id="os" class="btn btn-success" value="Tambahkan"></input>
                                 <button type="button" class="btn btn-warning" onclick="window.history.go(-1); return false;">Kembali</button>
                             </div>
                         </div>

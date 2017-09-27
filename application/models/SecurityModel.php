@@ -10,6 +10,14 @@ class SecurityModel extends CI_Model {
 			$this->session->sess_destroy();
 			redirect('Login');
 		}
+		else
+		{		
+			$level = $this->session->userdata('level');
+			if ($level == 'admin') {
+				redirect('admin_home');
+			}
+
+		}
 
 	}
 
@@ -23,8 +31,8 @@ class SecurityModel extends CI_Model {
 		else
 		{		
 			$level = $this->session->userdata('level');
-			if ($level == 'user') {
-				redirect('user');
+			if ($level == 'siswa') {
+				redirect('siswa_home');
 			}
 
 		}
